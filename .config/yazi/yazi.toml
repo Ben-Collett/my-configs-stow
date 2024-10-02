@@ -1,0 +1,17 @@
+[manager]
+show_hidden = true
+show_symlink = true
+
+[opener]
+wine = [
+	{ run = 'wine "$@"', orphan = true, for = "unix"}
+	]
+libre_office = [
+	{ run = 'libreoffice "$@"', orphan = true, for = "unix"}
+]
+[open]
+prepend_rules = [{name = "*.exe", use = ["wine", "open"]},
+		{name = "*.odt", use = ["libre_office"]}]
+
+
+

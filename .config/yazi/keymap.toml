@@ -1,0 +1,43 @@
+[[manager.prepend_keymap]]
+on   = "l"
+run  = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on   = "d"
+run  = "remove --permanently" 
+desc = "delete file"
+[[manager.prepend_keymap]]
+on = [ "<C-n>" ] 
+run = '''
+    shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
+''' 
+dec = 'drage and drop files with ripdrag'
+[[manager.prepend_keymap]]
+on = ['m','v']
+run = "plugin mv" 
+dec = 'mv file'
+
+[[manager.prepend_keymap]]
+on  = ["g","d"]
+run = "cd ~/Downloads/"
+dec = "cd to downloads"
+
+[[manager.prepend_keymap]]
+on  = ["g","v"]
+run = "cd ~/Videos/"
+dec = "cd to downloads"
+[[manager.prepend_keymap]]
+on = [ "L" ]
+run = "plugin bypass"
+desc = "Recursively enter child directory, skipping children with only a single subdirectory"
+[[manager.prepend_keymap]]
+on = [ "H" ]
+run = "plugin bypass --args=reverse"
+desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
+
+[[manager.prepend_keymap]]
+on = ['g','f']
+run = 'search_do --via=fd'
+desc = "Switch to the flat view" 
+
