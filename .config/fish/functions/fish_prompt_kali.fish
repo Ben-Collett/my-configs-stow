@@ -10,8 +10,8 @@ function fish_prompt
     set -l white (set_color white)
     
     set -l cwd (pwd | sed "s|^$HOME|~|")
-    set -l vi_mode (fish_default_mode_prompt)
 
+    set -l vi_mode (fish_default_mode_prompt)
     if test $last_status = 0
         set -l status_indicator "$green➜"
     else

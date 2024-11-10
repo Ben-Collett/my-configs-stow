@@ -9,14 +9,15 @@ vim.keymap.set("i","FD",'<ESC>"+pa')
 vim.keymap.set("i","DF",'<ESC>pa')
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", '<cmd>w<cr><cmd>Yazi<cr>')
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 
 vim.keymap.set("n", "<leader>p", '"+p')
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
-vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y')
+vim.keymap.set({"n", "v"}, "<leader>y", '"+y')
+vim.keymap.set({"n", "v"}, "<leader>Y", '"+Y')
 
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
-vim.keymap.set({ "n", "v" }, "<leader>D", '"_D')
+vim.keymap.set({"n", "v"}, "<leader>d", '"_d')
+vim.keymap.set({"n", "v"}, "<leader>D", '"_D')
 
 vim.keymap.set("n","<leader>sa", "gg0vG$")

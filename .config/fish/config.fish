@@ -24,7 +24,6 @@ if status is-interactive
     abbr lpwd 'eza --icons --absolute'
     abbr cl clear
     abbr lc clear
-    abbr ctp 'xsel -b'
     abbr yt-dlp "bash -c yt-dlp '"
     
     abbr mkp 'mkdir -p'
@@ -36,7 +35,6 @@ if status is-interactive
     alias semail="firefox https://mail.google.com/mail/u/0/#inbox"
     alias vscode='flatpak run com.visualstudio.code'
     alias lflutter='mpv ~/Downloads/Flutter\ Course\ for\ Beginners\ –\ 37-hour\ Cross\ Platform\ App\ Development\ Tutorial\ \[VPvVD8t02U8\].mp4'
-    alias librewolf $APP_IMAGE_PATH/LibreWolf.x86_64.AppImage
     alias sthing $SOURCE_CODES/syncthing/bin/syncthing
     alias ladybird /home/ben/programs/ladybird/Build/ladybird/bin/Ladybird
     alias flutter /home/ben/programs/flutter/bin/flutter

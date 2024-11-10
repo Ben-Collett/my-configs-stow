@@ -13,10 +13,6 @@ run = '''
     shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
 ''' 
 dec = 'drage and drop files with ripdrag'
-[[manager.prepend_keymap]]
-on = ['m','v']
-run = "plugin mv" 
-dec = 'mv file'
 
 [[manager.prepend_keymap]]
 on  = ["g","d"]
@@ -40,4 +36,26 @@ desc = "Recursively enter parent directory, skipping parents with only a single 
 on = ['g','f']
 run = 'search_do --via=fd'
 desc = "Switch to the flat view" 
+[[manager.prepend_keymap]]
+on = ['Y']
+run = 'yank --cut'
+desc = "yank"
 
+[[manager.prepend_keymap]]
+on   = "o"
+run  = "plugin open-with-cmd --args=block"
+desc = "Open with command in the terminal"
+
+[[manager.prepend_keymap]]
+on   = "O"
+run  = "plugin open-with-cmd"
+desc = "Open with command"
+
+[[manager.prepend_keymap]]
+on = "e"
+run = "shell '$@' --confirm" 
+desc = "execute the current selected file"
+[[manager.prepend_keymap]]
+on = ["c","o"]
+run = "shell 'codium $@' --confirm" 
+desc = "opens with codium"
