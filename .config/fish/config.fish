@@ -5,6 +5,9 @@ if status is-interactive
     set SOURCE_CODES ~/Desktop/source_codes_for_building
     set -gx EDITOR nvim
     set -gx IPYTHONDIR ~/.config/ipython
+    set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk/
+    set -x PATH $JAVA_HOME/bin $PATH
+    set -x MANPAGER "nvim +Man!"
 
     abbr ls 'eza --icons'
     abbr sl 'eza --icons'
@@ -24,7 +27,6 @@ if status is-interactive
     abbr lpwd 'eza --icons --absolute'
     abbr cl clear
     abbr lc clear
-    abbr yt-dlp "bash -c yt-dlp '"
     
     abbr mkp 'mkdir -p'
     abbr intellij idea
@@ -37,7 +39,8 @@ if status is-interactive
     alias lflutter='mpv ~/Downloads/Flutter\ Course\ for\ Beginners\ –\ 37-hour\ Cross\ Platform\ App\ Development\ Tutorial\ \[VPvVD8t02U8\].mp4'
     alias sthing $SOURCE_CODES/syncthing/bin/syncthing
     alias ladybird /home/ben/programs/ladybird/Build/ladybird/bin/Ladybird
-    alias flutter /home/ben/programs/flutter/bin/flutter
+    set flutter_path /home/ben/programs/flutter/bin
+    set -x PATH $flutter_path/ $PATH
     alias dart /home/ben/programs/flutter/bin/dart
 
     bind \er launch_ranger
@@ -52,4 +55,3 @@ function launch_ranger
     ranger .
 end
 
-thefuck --alias | source
