@@ -2,6 +2,7 @@
 show_hidden = true
 show_symlink = true
 
+
 [opener]
 wine = [
 	{ run = 'wine "$@"', orphan = true, for = "unix"}

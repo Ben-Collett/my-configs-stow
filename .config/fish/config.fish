@@ -15,6 +15,7 @@ if status is-interactive
     abbr la 'eza -a --icons'
     abbr ll 'eza -l --icons '
     abbr lla 'eza -al --icons '
+    abbr lal 'eza -al --icons '
     abbr l eza
     abbr sh0 'shutdown now'
     abbr shr 'shutdown -r now'
