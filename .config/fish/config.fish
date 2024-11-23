@@ -28,6 +28,7 @@ if status is-interactive
     abbr lpwd 'eza --icons --absolute'
     abbr cl clear
     abbr lc clear
+    abbr dc cd
     
     abbr mkp 'mkdir -p'
     abbr intellij idea
