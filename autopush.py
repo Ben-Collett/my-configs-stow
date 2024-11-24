@@ -61,6 +61,7 @@ else:
     commit_error = commit.stderr
 
     if commit_error != '':
+        print('commit'+commit_error+'error')
         display_popup(commit_error)
     else:
         push = subprocess.run(['git', 'push'], capture_output=True, text=True)
