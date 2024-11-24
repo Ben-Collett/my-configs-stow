@@ -15,6 +15,7 @@ def get_untracked(stdout: str):
 
 
 def display_popup(message):
+    print(message)
     root = Tk()
     root.title("Git Status")
 
