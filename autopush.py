@@ -69,4 +69,5 @@ else:
         push_err = push.stderr
         if push_err != '':
             print('push'+push_err+'error')
+            print(push, stdout)
             display_popup('auto push had an error pushign' + push_err)
