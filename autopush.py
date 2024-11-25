@@ -57,6 +57,7 @@ elif len(untracked) >= 1:
     display_popup('Following are untracked:\r\n' + untracked_string)
 else:
     time_stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    add = subprocess.run(['git', 'add', '.'])
     commit = subprocess.run(['git', 'commit', '-am', time_stamp],
                           capture_output=True, text=True)
     commit_error = commit.stderr
