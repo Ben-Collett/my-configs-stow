@@ -1,8 +1,11 @@
 #!/bin/python
 import subprocess
+import os
 from datetime import datetime
 from tkinter import Tk, Text, Scrollbar, Button
+
 ignoreNew = ['./.config/nvim/', './.config/fish/', './.config/yazi/']
+os.chdir(os.path.expanduser('~/my-configs-stow/'))
 
 
 def get_untracked(stdout: str):
