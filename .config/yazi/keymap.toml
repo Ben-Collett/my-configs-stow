@@ -18,7 +18,9 @@ dec = 'drage and drop files with ripdrag'
 on  = ["g","d"]
 run = "cd ~/Downloads/"
 dec = "cd to downloads"
-
+[[manager.prepend_keymap]]
+on = ['g','t']
+run = 'plugin --sync mounter'
 [[manager.prepend_keymap]]
 on  = ["g","v"]
 run = "cd ~/Videos/"

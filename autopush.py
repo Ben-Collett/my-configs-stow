@@ -2,7 +2,7 @@
 import subprocess
 from datetime import datetime
 from tkinter import Tk, Text, Scrollbar, Button
-ignoreNew = {'./.config/nvim/', './.config/fish/', './.config/yazi/'}
+ignoreNew = ['./.config/nvim/', './.config/fish/', './.config/yazi/']
 
 
 def get_untracked(stdout: str):
@@ -42,9 +42,9 @@ stdout = subprocess.run(['git', 'status', '-s'], capture_output=True, text=True)
 
 untracked = get_untracked(stdout)
 
-for path in untracked:
-    temp = './'+path
-    for ignored_paths in ignoreNew[:]:
+for path in untracked[:]:
+    temp = './'+path.strip()
+    for ignored_paths in ignoreNew:
         if temp.startswith(ignored_paths):
             untracked.remove(path)
 
