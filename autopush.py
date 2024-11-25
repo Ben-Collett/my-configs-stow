@@ -3,9 +3,21 @@ import subprocess
 import os
 from datetime import datetime
 from tkinter import Tk, Text, Scrollbar, Button
+import socket
+import time
 
 ignoreNew = ['./.config/nvim/', './.config/fish/', './.config/yazi/']
 os.chdir(os.path.expanduser('/home/ben/my-configs-stow/'))
+
+
+def wait_for_network(host="8.8.8.8", port=53, timeout=5):
+    while True:
+        try:
+            # Attempt to connect to the host
+            socket.create_connection((host, port), timeout=timeout)
+            break  # Connection successful, exit the loop
+        except (socket.timeout, socket.error):
+            time.sleep(2)  # Wait for 2 seconds before retrying
 
 
 def get_untracked(stdout: str):
@@ -64,11 +76,11 @@ else:
     commit = subprocess.run(['git', 'commit', '-am', time_stamp],
                           capture_output=True, text=True)
     commit_error = commit.stderr
-
     if commit_error != '':
         print('commit'+commit_error+'error')
         display_popup(commit_error)
     else:
+        wait_for_network()
         push = subprocess.run(['git', 'push'], capture_output=True, text=True)
         push_err = push.returncode
         if push_err != 0:
