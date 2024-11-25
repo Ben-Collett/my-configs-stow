@@ -66,8 +66,8 @@ else:
         display_popup(commit_error)
     else:
         push = subprocess.run(['git', 'push'], capture_output=True, text=True)
-        push_err = push.stderr
-        if push_err != '':
+        push_err = push.returncode
+        if push_err != 0:
             print('push'+push_err+'error')
             print(push.stdout)
             display_popup('auto push had an error pushign' + push_err)
