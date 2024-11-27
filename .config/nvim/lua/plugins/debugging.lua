@@ -5,18 +5,7 @@ return  {
       local kmap = vim.keymap
       local nio = require('nio') -- dapui requires nio
       local dap, dapui,vtext = require("dap"), require("dapui"), require("nvim-dap-virtual-text")
-    dap.configurations.python = {
-      {
-        type = 'python';
-        request = 'launch';
-        name = "Launch file";
-        program = "${file}";
-        pythonPath = function()
-          return '/usr/bin/python'
-        end;
-      },
-    }
-      --local pdap = require("dap-python")
+        --local pdap = require("dap-python")
       dapui.setup()
       vtext.setup()
       --pdap.setup()
@@ -34,9 +23,10 @@ return  {
     end
     kmap.set('n', '<Leader>b',dap.toggle_breakpoint)
     kmap.set('n', '<Leader>dc',dap.continue)
-    kmap.set('n','<Leader>ds',dap.step_over)
+    kmap.set('n','<Leader>dso',dap.step_over)
     kmap.set('n','<Leader>dou',dap.step_out)
     kmap.set('n','<Leader>dsb',dap.step_back)
+    kmap.set('n','<Leader>dcu',dap.run_to_cursor)
   end
 
 }
