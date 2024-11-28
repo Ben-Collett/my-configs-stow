@@ -1,9 +1,11 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
+  build = ":TSUpdate",
   opts = {
   	highlight = { enable = true } ,
-	indent = { enable = true},
-	ensure_installed = {"diff","lua","python","toml","regex","luadoc","diff","vim","dart"}
+	  indent = { enable = true},
+    auto_isntall = true,
+	  ensure_installed = {"diff","lua","python","toml","regex","luadoc","nu","vim","dart"}
   }
   }
