@@ -40,7 +40,6 @@ if status is-interactive
     alias vscode='flatpak run com.visualstudio.code'
     alias lflutter='mpv ~/Downloads/Flutter\ Course\ for\ Beginners\ –\ 37-hour\ Cross\ Platform\ App\ Development\ Tutorial\ \[VPvVD8t02U8\].mp4'
     alias sthing $SOURCE_CODES/syncthing/bin/syncthing
-    alias ladybird /home/ben/programs/ladybird/Build/ladybird/bin/Ladybird
     set flutter_path /home/ben/programs/flutter/bin
     set -x PATH $flutter_path/ $PATH
     alias dart /home/ben/programs/flutter/bin/dart
