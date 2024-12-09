@@ -1,6 +1,6 @@
 [[manager.prepend_keymap]]
 on   = "l"
-run  = "plugin --sync smart-enter"
+run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 
 [[manager.prepend_keymap]]
@@ -20,10 +20,10 @@ run = "cd ~/Downloads/"
 dec = "cd to downloads"
 [[manager.prepend_keymap]]
 on = ['g','t']
-run = 'plugin --sync mounter'
+run = 'plugin mounter'
 [[manager.prepend_keymap]]
 on = ['g','k']
-run = 'plugin --sync eazy_mounter'
+run = 'plugin eazy_mounter'
 [[manager.prepend_keymap]]
 on  = ["g","v"]
 run = "cd ~/Videos/"
