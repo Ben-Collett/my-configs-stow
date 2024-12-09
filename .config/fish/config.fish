@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    fish_add_path ~/.cargo/bin/
 
     set APP_IMAGE_PATH ~/Desktop/app_images
     set SOURCE_CODES ~/Desktop/source_codes_for_building

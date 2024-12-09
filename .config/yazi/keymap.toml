@@ -22,6 +22,9 @@ dec = "cd to downloads"
 on = ['g','t']
 run = 'plugin --sync mounter'
 [[manager.prepend_keymap]]
+on = ['g','k']
+run = 'plugin --sync eazy_mounter'
+[[manager.prepend_keymap]]
 on  = ["g","v"]
 run = "cd ~/Videos/"
 dec = "cd to downloads"

@@ -4,7 +4,12 @@ return {
     local file = io.popen("ls")
     local output = file:read("*all")
     file:close()
-    print(output)
+    
+    -- Split the string on newlines
+    local lines = {}
+    for line in output:gmatch("([^\n]+)") do
+        table.insert(lines, line)
+    end
 
 		local h = cx.active.current.hovered
 		--ya.manager_emit(h and h.cha.is_dir and "enter" or "open", { hovered = true })

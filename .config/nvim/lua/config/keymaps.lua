@@ -2,9 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.g.mapleader=' ' --also set in lazy plugin but doesnt seem to work for some reason 
-
-vim.keymap.set("i", "JK", "<ESC>")
-vim.keymap.set("i", "KJ", "<ESC>v")
 vim.keymap.set("i","FD",'<ESC>"+pa')
 vim.keymap.set("i","DF",'<ESC>pa')
 
