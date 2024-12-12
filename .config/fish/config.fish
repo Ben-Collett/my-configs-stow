@@ -46,6 +46,13 @@ if status is-interactive
     alias dart /home/ben/programs/flutter/bin/dart
 
     bind \er launch_ranger
+    bind -e -M insert \cl
+    bind -e -M insert \cj
+    bind -e -M insert \ck
+    bind -e -M insert \ch
+    bind \cd 'exit'
+    bind -M insert \ck up-or-search
+    bind -M insert \cj complete 
 
     fish_vi_key_bindings
     zoxide init fish | source
