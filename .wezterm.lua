@@ -20,5 +20,13 @@ config.keys = {
     {key = 't', mods = 'CTRL', action = wezterm.action{SpawnTab='CurrentPaneDomain'}},
     {key="l", mods="ALT", action=wezterm.action{ActivateTabRelative=1}},
     {key="h", mods="ALT", action=wezterm.action{ActivateTabRelative=-1}},
+    {key="h", mods="CTRL|ALT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    {key="l", mods="CTRL|ALT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    {key="j", mods="CTRL|ALT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    {key="k", mods="CTRL|ALT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    {key="h", mods="ALT|SHIFT", action=wezterm.action{ActivatePaneDirection="Left"}},
+    {key="j", mods="ALT|SHIFT", action=wezterm.action{ActivatePaneDirection="Down"}},
+    {key="k", mods="ALT|SHIFT", action=wezterm.action{ActivatePaneDirection="Up"}},
+    {key="l", mods="ALT|SHIFT", action=wezterm.action{ActivatePaneDirection="Right"}} 
    }
 return config
