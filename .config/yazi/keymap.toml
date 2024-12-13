@@ -45,6 +45,11 @@ run = "plugin bypass --args=reverse"
 desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
 
 [[manager.prepend_keymap]]
+on = ["m","t"]
+run = "plugin what-size"
+desc = "calc size of selection or cwd"
+  
+[[manager.prepend_keymap]]
 on = ['g','f']
 run = 'search_do --via=fd'
 desc = "Switch to the flat view" 
