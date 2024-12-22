@@ -32,6 +32,9 @@ run = 'plugin mounter'
 on = ['g','k']
 run = 'plugin eazy_mounter'
 [[manager.prepend_keymap]]
+on = ['g','s']
+run = 'plugin es_mounter'
+[[manager.prepend_keymap]]
 on  = ["g","v"]
 run = "cd ~/Videos/"
 dec = "cd to downloads"
