@@ -22,3 +22,4 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 ^/autopush.py
+^/manual_symlinks
