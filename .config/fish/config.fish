@@ -30,6 +30,7 @@ if status is-interactive
     abbr cl clear
     abbr lc clear
     abbr dc cd
+    abbr cn nmtui
     
     abbr mkp 'mkdir -p'
     abbr intellij idea
