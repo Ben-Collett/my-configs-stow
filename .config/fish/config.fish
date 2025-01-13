@@ -1,7 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_add_path ~/.cargo/bin/
-
+    #oh-my-posh init fish | source
+    starship init fish | source
     set APP_IMAGE_PATH ~/Desktop/app_images
     set SOURCE_CODES ~/Desktop/source_codes_for_building
     set -gx EDITOR nvim
@@ -14,6 +15,7 @@ if status is-interactive
     abbr sl 'eza --icons'
     abbr sls 'eza --icons'
     abbr la 'eza -a --icons'
+    abbr al 'eza -a --icons'
     abbr ll 'eza -l --icons '
     abbr lla 'eza -al --icons '
     abbr lal 'eza -al --icons '
@@ -35,6 +37,7 @@ if status is-interactive
     abbr mkp 'mkdir -p'
     abbr intellij idea
     abbr cat lolcat
+    abbr fokular org.kde.okular
 
     
     alias p='~/programs/pycharm-community-2024.1.1/bin/pycharm.sh'

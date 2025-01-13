@@ -108,7 +108,8 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-bindsym $mod+g exec "chromium https://chatgpt.com/"
+bindsym $mod+g exec "firefox https://chatgpt.com/"
+bindsym $mod+o exec 'codium'
 # focus the child container
 #bindsym $mod+d focus child
 
