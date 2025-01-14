@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_add_path ~/.cargo/bin/
     #oh-my-posh init fish | source
-    starship init fish | source
+    #starship init fish | source
     set APP_IMAGE_PATH ~/Desktop/app_images
     set SOURCE_CODES ~/Desktop/source_codes_for_building
     set -gx EDITOR nvim
@@ -43,7 +43,6 @@ if status is-interactive
     alias p='~/programs/pycharm-community-2024.1.1/bin/pycharm.sh'
     alias semail="firefox https://mail.google.com/mail/u/0/#inbox"
     alias vscode='flatpak run com.visualstudio.code'
-    alias lflutter='mpv ~/Downloads/Flutter\ Course\ for\ Beginners\ –\ 37-hour\ Cross\ Platform\ App\ Development\ Tutorial\ \[VPvVD8t02U8\].mp4'
     alias sthing $SOURCE_CODES/syncthing/bin/syncthing
     set flutter_path /home/ben/programs/flutter/bin
     set -x PATH $flutter_path/ $PATH
