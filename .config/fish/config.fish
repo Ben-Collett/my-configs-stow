@@ -38,6 +38,7 @@ if status is-interactive
     abbr intellij idea
     abbr cat lolcat
     abbr fokular org.kde.okular
+    abbr pcount 'ps -A | count'
 
     
     alias p='~/programs/pycharm-community-2024.1.1/bin/pycharm.sh'

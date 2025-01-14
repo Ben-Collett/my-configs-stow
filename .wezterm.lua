@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 
 config.window_background_opacity = 0.9
-
+--config.window_decorations = "NONE"
 config.exit_behavior = "Close"
 
 config.keys = {
