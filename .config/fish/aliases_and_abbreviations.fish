@@ -32,6 +32,7 @@ abbr intellij idea
 abbr fokular org.kde.okular
 
 
+alias sal "ls -a"
 alias sthing=$SOURCE_CODES/syncthing/bin/syncthing
 alias dart=/home/ben/programs/flutter/bin/dart
 
