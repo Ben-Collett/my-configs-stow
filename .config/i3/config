@@ -57,6 +57,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "dmenu_path | dmenu -f | /usr/bin/fish"
+bindsym $mod+y exec "wezterm-gui 'start yazi'"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -114,7 +115,7 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 bindsym $mod+g exec "firefox https://chatgpt.com/"
-bindsym $mod+o exec 'codium'
+bindsym $mod+o exec 'fish -c codium'
 # focus the child container
 #bindsym $mod+d focus child
 
