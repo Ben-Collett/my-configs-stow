@@ -58,6 +58,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec "dmenu_path | dmenu -f | /usr/bin/fish"
 bindsym $mod+y exec "wezterm-gui 'start yazi'"
+bindsym $mod+p exec "fish -c pycharm-community"
+bindsym $mod+i exec "fish -c idea-community"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
