@@ -37,6 +37,12 @@ run = 'plugin mounter'
 on = ['g','k']
 run = 'plugin eazy_mounter'
 [[manager.prepend_keymap]]
+on = ['n']
+run = '''
+    shell 'fzf&clear' --confirm
+''' 
+
+[[manager.prepend_keymap]]
 on = ['g','s']
 run = 'plugin es_mounter'
 [[manager.prepend_keymap]]
