@@ -17,5 +17,5 @@ function fish_prompt
     else
         set -l status_indicator "$red➜"
     end
-    echo -n -s "$green┌──($blue" kali㉿kali "$green)-[$white$cwd$green]-$vi_mode" \n "$green└─$blue" \$ 
+    echo -n -s "$green┌──($blue" kali㉿kali "$green)-[$white$cwd$green]-$vi_mode" \n "$green└─$blue" \$
 end
