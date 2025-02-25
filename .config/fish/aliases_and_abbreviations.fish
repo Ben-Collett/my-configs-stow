@@ -15,6 +15,9 @@ abbr lh 'eza | head -n'
 abbr lha 'eza -a| head -n'
 
 abbr sh0 'shutdown now'
+abbr s0h 'shutdown now'
+abbr 0sh 'shutdown now'
+abbr h0s 'shutdown now'
 abbr shr 'shutdown -r now'
 
 abbr cl clear
