@@ -1,15 +1,3 @@
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "fish",
-  callback = function()
-    vim.lsp.start({
-      name = "fish-lsp",
-      cmd = { "fish-lsp", "start" },
-      cmd_env = { fish_lsp_show_client_popups = false },
-      keymap = {},
-    })
-  end,
-})
-
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
@@ -19,16 +7,20 @@ return {
     { "folke/neodev.nvim", opts = {} },
   },
   config = function()
-    -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
-    -- import mason_lspconfig plugin
+    lspconfig.fish_lsp.setup({
+      cmd = { "fish-lsp", "start" },
+      single_file_support = true,
+      fish_lsp_show_client_popups = false,
+    })
+
     local mason_lspconfig = require("mason-lspconfig")
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    local keymap = vim.keymap -- for conciseness
+    local keymap = vim.keymap
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
