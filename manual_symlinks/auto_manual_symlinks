@@ -1,1 +1,1 @@
-sudo ln ./default.conf /etc/keyd/default.conf
+sudo ln -s ~/my-configs-stow/manual_symlinks/default.conf /etc/keyd/
