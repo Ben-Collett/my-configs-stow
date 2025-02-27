@@ -13,5 +13,5 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
-vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme mytheme")
 vim.cmd("TSEnable highlight")
