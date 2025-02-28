@@ -5,7 +5,7 @@ function lua(ls, s, t, i, fmt, rep)
       "sn",
       fmt(
         [=[
-      ls.add_snippets({}, s("{}",fmt([[{}]],{})))
+      ls.add_snippets({}, {{s("{}",fmt([[{}]],{}))}})
     ]=],
         { i(1), i(2), i(3), i(4) }
       )

@@ -3,6 +3,7 @@
 vim.g.colors_name = "mycolorscheme"
 vim.api.nvim_set_hl(0, "@lsp.type.comment", {})
 
+vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
 local colors = {
   bg = "#110112",
   fg = "#FFFFFF",
@@ -16,6 +17,7 @@ local colors = {
   purple = "#c678dd",
   cyan = "#56b6c2",
   gray = "#a0a0a0", --comments
+  pink = "#FFC0CB",
   orange = "#dd8e04",
   white = "#ffffff",
 }
@@ -51,4 +53,5 @@ ts_highlight("@string.special.path", colors.yellow, nil, "underline")
 ts_highlight("@variable", colors.blue, nil)
 ts_highlight("@comment.", colors.gray, nil)
 ts_highlight("@comment.TODO", colors.white, nil, "underline") -- you have to TSInstall comment for this to work
+ts_highlight("@attribute", colors.pink)
 --ts_highlight(@variable, colors., bg, style)
