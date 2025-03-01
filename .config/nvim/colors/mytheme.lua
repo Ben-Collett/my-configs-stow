@@ -1,9 +1,14 @@
 -- ~/.config/nvim/colors/mycolorscheme.lua
 
 vim.g.colors_name = "mycolorscheme"
-vim.api.nvim_set_hl(0, "@lsp.type.comment", {})
+--vim.api.nvim_set_hl(0, "@lsp.type.comment", {})
+--vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
 
-vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
+--the for loop disable lsp highlighting
+for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+  vim.api.nvim_set_hl(0, group, {}) --decorator is annotation
+end
+
 local colors = {
   bg = "#110112",
   fg = "#FFFFFF",
@@ -13,11 +18,12 @@ local colors = {
   deep_green = "#31A3A3",
   yellow = "#e5c07b", -- Warning (yellow)
   blue = "#61afef", -- Information (blue)
-  dark_blue = "#123499",
+  dark_blue = "#1234E9",
   purple = "#c678dd",
   cyan = "#56b6c2",
   gray = "#a0a0a0", --comments
   pink = "#FFC0CB",
+  gold = "#cfb53b",
   orange = "#dd8e04",
   white = "#ffffff",
 }
@@ -51,7 +57,9 @@ ts_highlight("@string", colors.yellow, nil)
 ts_highlight("@string.special.url", colors.yellow, nil, "underline")
 ts_highlight("@string.special.path", colors.yellow, nil, "underline")
 ts_highlight("@variable", colors.blue, nil)
+ts_highlight("@variable.builtin", colors.orange, nil)
 ts_highlight("@comment.", colors.gray, nil)
 ts_highlight("@comment.TODO", colors.white, nil, "underline") -- you have to TSInstall comment for this to work
 ts_highlight("@attribute", colors.pink)
+ts_highlight("@keyword.return", colors.gold, nil, "italic")
 --ts_highlight(@variable, colors., bg, style)
