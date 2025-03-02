@@ -7,7 +7,7 @@ function lua(ls, s, t, i, fmt, rep)
         [=[
       ls.add_snippets({}, {{s("{}",fmt([[{}]],{}))}})
     ]=],
-        { i(1), i(2), i(3), i(4) }
+        { i(1, "targetLanguage"), i(2, "funcName"), i(3, "parameters"), i(4, "content") }
       )
     ),
   })
@@ -29,6 +29,10 @@ function dart(ls, s, i, fmt, rep)
       )
     ),
   })
+  ls.add_snippets(
+    dart,
+    { s("inf", fmt([[{} {}({}) => {};]], { i(1, "returnType"), i(2, "funcName"), i(3, "parameters"), i(4) })) }
+  )
 end
 
 return {
