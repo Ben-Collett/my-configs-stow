@@ -24,3 +24,52 @@ vim.keymap.set("n", "<leader>sa", "gg0vG$")
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+
+local vim = vim
+local api = vim.api
+local M = {}
+-- function to create a list of commands and convert them to autocommands
+-------- This function is taken from https://github.com/norcalli/nvim_utils
+function M.nvim_create_augroups(definitions)
+  for group_name, definition in pairs(definitions) do
+    api.nvim_command("augroup " .. group_name)
+    api.nvim_command("autocmd!")
+    for _, def in ipairs(definition) do
+      local command = table.concat(vim.tbl_flatten({ "autocmd", def }), " ")
+      api.nvim_command(command)
+    end
+    api.nvim_command("augroup END")
+  end
+end
+
+local autoCommands = {
+  -- other autocommands
+  open_folds = {
+    { "BufReadPost,FileReadPost", "*", "normal zR" },
+  },
+}
+
+M.nvim_create_augroups(autoCommands)
+-- Toggle fold under cursor
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fm",
+  ':lua require"nvim-treesitter.fold".toggle()<CR>',
+  { noremap = true, silent = true }
+)
+
+-- Fold all methods in the file
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fa",
+  ':lua vim.wo.foldmethod="expr"; vim.wo.foldexpr="nvim_treesitter#foldexpr()"<CR>',
+  { noremap = true, silent = true }
+)
+
+-- Unfold all methods in the file
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ua",
+  ':lua vim.wo.foldmethod="manual"; vim.wo.foldlevel=99<CR>',
+  { noremap = true, silent = true }
+)
