@@ -2,6 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
   build = ":TSUpdate",
+  dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
   opts = {
     highlight = { enable = true },
     indent = { enable = true },
