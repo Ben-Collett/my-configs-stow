@@ -25,6 +25,8 @@ vim.keymap.set("n", "<leader>sa", "gg0vG$")
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
+vim.keymap.set("t", "<C-;>", [[<C-\><C-n>]])
+
 local vim = vim
 local api = vim.api
 local M = {}
