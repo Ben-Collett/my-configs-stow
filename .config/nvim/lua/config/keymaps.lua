@@ -75,3 +75,18 @@ vim.api.nvim_set_keymap(
   ':lua vim.wo.foldmethod="manual"; vim.wo.foldlevel=99<CR>',
   { noremap = true, silent = true }
 )
+
+--TODO: find in pubsec.yaml using grep
+local function is_flutter_project()
+  return true
+end
+local function run()
+  local filetype = vim.bo.filetype
+  local file_path = vim.fn.expand("%:p")
+  if is_flutter_project() and filetype == "dart" then
+    --WARNING: this depends on toggle term, or at the very least a TermExec command that works like toggle term
+    vim.cmd('TermExec cmd="flutter run -t ' .. file_path .. '"')
+  end
+end
+
+vim.keymap.set("n", "<leader>ru", run)
