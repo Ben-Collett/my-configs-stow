@@ -1,8 +1,8 @@
-return{
+return {
   "jay-babu/mason-nvim-dap.nvim",
-  dependencies = {'williamboman/mason.nvim','mfussenegger/nvim-dap'},
-  config = function ()
-   require('mason').setup()
+  dependencies = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
+  config = function()
+    require("mason").setup()
   end,
   opts = {
     handlers = {
@@ -26,6 +26,17 @@ return{
           },
         }
       end,
+      dart = function(source_name)
+        local dap = require("dap")
+        dap.adapters.python = {
+          type = "executable",
+          command = "/usr/bin/python3",
+          args = {
+            "-m",
+            "debugpy.adapter",
+          },
+        }
+      end,
     },
-  }
+  },
 }

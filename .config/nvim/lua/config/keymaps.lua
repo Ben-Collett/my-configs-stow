@@ -86,6 +86,8 @@ local function run()
   if is_flutter_project() and filetype == "dart" then
     --WARNING: this depends on toggle term, or at the very least a TermExec command that works like toggle term
     vim.cmd('TermExec cmd="flutter run -t ' .. file_path .. '"')
+  elseif filetype == "python" then
+    vim.cmd('TermExec cmd="python ' .. file_path .. '"')
   end
 end
 
