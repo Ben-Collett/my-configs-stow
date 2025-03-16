@@ -92,3 +92,56 @@ local function run()
 end
 
 vim.keymap.set("n", "<leader>ru", run)
+
+local function get_selected()
+  if vim.fn.mode() ~= "v" then
+    print("Not in visual mode!")
+    return
+  end
+
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  return vim.fn.getline(start_pos[2], end_pos[2])
+end
+local function wrap_with_if()
+  -- Get the start and end position of the selection
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+
+  -- Get the text within the selected range
+  local lines = get_selected()
+  if lines == nil then
+    return
+  end
+
+  -- Determine the indentation level of the first line
+  local indent_level = string.match(lines[1], "^%s*")
+
+  -- Wrap the content with the if statement and indent the content
+  local wrapped_lines = {}
+  table.insert(wrapped_lines, indent_level .. "if () {")
+
+  for _, line in ipairs(lines) do
+    -- Indent each line with one level
+    table.insert(wrapped_lines, indent_level .. "  " .. line)
+  end
+
+  table.insert(wrapped_lines, indent_level .. "}")
+
+  -- Replace the selected content with the wrapped lines
+  vim.fn.setline(start_pos[2], wrapped_lines[1])
+
+  -- For subsequent lines, replace them while keeping the indent
+  for i = 2, #wrapped_lines do
+    vim.fn.append(start_pos[2] + i - 1, wrapped_lines[i])
+  end
+
+  -- Adjust the cursor position to the end of the wrapped block
+  vim.fn.setpos(".", { 0, end_pos[2] + #wrapped_lines - 1, 0, 0 })
+
+  -- Optionally: clear the selection after wrapping
+  vim.cmd("normal! gv")
+end
+
+-- Bind the function to a key in normal mode (e.g., <Leader>w)
+vim.keymap.set("v", "<Leader>wi", wrap_with_if)
