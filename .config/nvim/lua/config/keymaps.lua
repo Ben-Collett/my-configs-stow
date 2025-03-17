@@ -103,6 +103,37 @@ local function get_selected()
   local end_pos = vim.fn.getpos("'>")
   return vim.fn.getline(start_pos[2], end_pos[2])
 end
+
+local function create_window_with_text(text)
+  -- Create a new buffer (scratch buffer)
+  local buf = vim.api.nvim_create_buf(false, true)
+
+  -- Get the current editor size
+  local width = vim.api.nvim_get_option("columns")
+  local height = vim.api.nvim_get_option("lines")
+
+  -- Define window size and position
+  local win_width = math.ceil(width * 0.5)
+  local win_height = math.ceil(height * 0.3)
+  local row = math.ceil((height - win_height) / 2)
+  local col = math.ceil((width - win_width) / 2)
+
+  -- Create a floating window
+  local win = vim.api.nvim_open_win(buf, true, {
+    relative = "editor",
+    width = win_width,
+    height = win_height,
+    row = row,
+    col = col,
+    style = "minimal",
+    border = "single",
+  })
+
+  -- Set the buffer text
+  vim.api.nvim_buf_set_lines(buf, 0, -1, false, { text })
+end
+
+-- Example usage
 local function wrap_with_if()
   -- Get the start and end position of the selection
   local start_pos = vim.fn.getpos("'<")
@@ -114,6 +145,7 @@ local function wrap_with_if()
     return
   end
 
+  create_window_with_text(lines)
   -- Determine the indentation level of the first line
   local indent_level = string.match(lines[1], "^%s*")
 
