@@ -35,6 +35,22 @@ function dart(ls, s, i, fmt, rep)
   )
 end
 
+function java(ls, s, t, i, fmt, rep)
+  ls.add_snippets("java", {
+    s(
+      "test",
+      fmt(
+        [[
+  @Test
+  public void {} {{
+      {}
+  }}]],
+        i(1),
+        i(2)
+      )
+    ),
+  })
+end
 return {
   "L3MON4D3/LuaSnip",
   -- follow latest release.

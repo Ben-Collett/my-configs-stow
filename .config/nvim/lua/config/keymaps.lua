@@ -8,6 +8,9 @@ vim.keymap.set("i", "DF", "<ESC>pa")
 vim.keymap.set("i", "<C-H>", "<ESC>dbxi")
 vim.keymap.set({ "n", "i" }, "<C-A>", "<ESC>caw")
 
+vim.api.nvim_set_keymap("n", "'a", "`a", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "`a", "'a", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>e", "<cmd>w<cr><cmd>Yazi<cr>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

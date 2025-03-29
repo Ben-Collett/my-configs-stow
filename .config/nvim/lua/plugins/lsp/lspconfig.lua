@@ -8,7 +8,10 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
-
+    lspconfig.nushell.setup({
+      cmd = { "nu", "--lsp" },
+      single_file_support = true,
+    })
     lspconfig.fish_lsp.setup({
       cmd = { "fish-lsp", "start" },
       single_file_support = true,

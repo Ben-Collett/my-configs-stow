@@ -1,5 +1,5 @@
 return {
   "akinsho/toggleterm.nvim",
   version = "*",
-  opts = { open_mapping = "<leader>t", insert_mappings = false, shell = "nu" },
+  opts = { open_mapping = "<C-;>", terminal_mappings = false, shell = "nu" },
 }
