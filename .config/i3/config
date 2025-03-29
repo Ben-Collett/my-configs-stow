@@ -38,7 +38,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet
-exec --no-startup-id ~/.config/i3/nag.py
+#exec --no-startup-id ~/.config/i3/nag.py
 
 bindsym $mod+q exec "okular ~/Desktop/progit.pdf"
 bindsym $mod+v exec "firefox https://leetcode.com/"
