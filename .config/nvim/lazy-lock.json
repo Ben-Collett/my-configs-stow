@@ -41,5 +41,5 @@
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "undotree": { "branch": "master", "commit": "b951b87b46c34356d44aa71886aecf9dd7f5788a" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "aae26f6794c2afe2054a0782fb0ff07b2cd2876c" }
+  "yazi.nvim": { "branch": "main", "commit": "da2357b27799cd111f5564c23e16b290ef176e5a" }
 }
