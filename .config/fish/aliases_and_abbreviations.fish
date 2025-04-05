@@ -3,9 +3,9 @@ abbr sl eza --icons
 abbr sls eza --icons
 abbr la eza -a --icons
 abbr al eza -a --icons
-abbr ll eza -l --icons 
-abbr lla eza -al --icons 
-abbr lal eza -al --icons 
+abbr ll eza -l --icons
+abbr lla eza -al --icons
+abbr lal eza -al --icons
 abbr l eza
 abbr lg 'eza|rg'
 abbr lga 'eza -a|rg'
@@ -23,7 +23,6 @@ abbr shr 'shutdown -r now'
 abbr cl clear
 abbr lc clear
 
-
 abbr dc cd
 abbr cn nmtui
 
@@ -34,6 +33,8 @@ abbr pcount 'math (ps -A | count)-1'
 abbr intellij idea
 abbr fokular org.kde.okular
 
+abbr jv17 'set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk/'
+abbr jv24 'set -x JAVA_HOME ~/programs/jdk-24/'
 
 alias sthing=$SOURCE_CODES/syncthing/bin/syncthing
 alias dart=/home/ben/programs/flutter/bin/dart
