@@ -12,6 +12,7 @@ return {
         detached = true,
       },
     }
+
     dap.configurations.python = {
       {
         type = "python",

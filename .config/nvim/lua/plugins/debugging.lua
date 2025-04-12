@@ -28,5 +28,22 @@ return {
     kmap.set("n", "<Leader>dou", dap.step_out)
     kmap.set("n", "<C-k>", dap.step_back)
     kmap.set("n", "<C-c>", dap.run_to_cursor)
+
+    dap.adapters.dart = {
+      type = "executable",
+      command = "flutter",
+      args = { "debug-adapter" },
+    }
+
+    dap.configurations.dart = {
+      {
+        type = "dart",
+        request = "launch",
+        name = "Launch file with venv",
+        justMyCode = true,
+        program = "${file}",
+        cwd = vim.fn.getcwd(),
+      },
+    }
   end,
 }

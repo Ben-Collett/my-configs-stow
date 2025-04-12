@@ -10,8 +10,5 @@ return {
     widget_guides = {
       enabled = true,
     },
-    debugger = { -- integrate with nvim dap + install dart code debugger
-      enabled = true,
-    },
   },
 }
