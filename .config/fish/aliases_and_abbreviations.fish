@@ -38,4 +38,3 @@ abbr jv24 'set -x JAVA_HOME ~/programs/jdk-24/'
 
 alias sthing=$SOURCE_CODES/syncthing/bin/syncthing
 alias dart=/home/ben/programs/flutter/bin/dart
-alias yt-dlp=/home/ben/programs/yt-dlp-wrapper
