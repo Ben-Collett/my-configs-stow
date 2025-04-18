@@ -7,7 +7,6 @@ vim.keymap.set("i", "FD", '<ESC>"+pa')
 vim.keymap.set("i", "DF", "<ESC>pa")
 vim.keymap.set("i", "<C-H>", "<ESC>dbxi")
 vim.keymap.set({ "n", "i" }, "<C-A>", "<ESC>caw")
-
 vim.api.nvim_set_keymap("n", "'a", "`a", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "`a", "'a", { noremap = true, silent = true })
 
@@ -179,4 +178,3 @@ local function wrap_with_if()
 end
 
 -- Bind the function to a key in normal mode (e.g., <Leader>w)
-vim.keymap.set("v", "<Leader>wi", wrap_with_if)
