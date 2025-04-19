@@ -16,14 +16,17 @@ local function selected()
 end
 function lua(ls, s, t, i, fmt, rep)
   local lua = "lua"
-  ls.add_snippets(lua, {
+end
+function python(ls, s, t, i, fmt, rep)
+  ls.add_snippets("python", {
     s(
-      "sn",
+      { trig = "init", snippetType = "autosnippet", wordTrig = true },
       fmt(
-        [=[
-      ls.add_snippets({}, {{s("{}",fmt([[{}]],{}))}})
-    ]=],
-        { i(1, "targetLanguage"), i(2, "funcName"), i(3, "parameters"), i(4, "content") }
+        [[
+      def __init__(self):
+          {}
+      ]],
+        { i(1, "pass") }
       )
     ),
   })
@@ -81,7 +84,9 @@ return {
     local i = ls.insert_node
     local fmt = require("luasnip.extras.fmt").fmt
     local rep = require("luasnip.extras").rep
-
+    ls.config.set_config({
+      enable_autosnippets = true,
+    })
     skey = vim.keymap.set
     skey({ "i", "v" }, "<C-L>", function()
       ls.jump(1)
@@ -91,7 +96,7 @@ return {
     end)
     lua(ls, s, t, i, fmt, rep)
     dart(ls, s, i, fmt, rep)
-
+    python(ls, s, t, i, fmt, rep)
     vim.keymap.set({ "v", "n" }, "<leader>wi", function()
       --local selected = selected()
       --vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(":'<,'>delete<CR>i", true, false, true), "n", false)
