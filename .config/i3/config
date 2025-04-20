@@ -40,7 +40,7 @@ exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.config/i3/nag.py
 
-bindsym $mod+q exec "okular ~/Desktop/progit.pdf"
+bindsym $mod+q exec "~/programs/launch_book.fish"
 bindsym $mod+v exec "firefox https://leetcode.com/"
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
