@@ -6,7 +6,7 @@ return {
     conform.setup({
       formatters_by_ft = {
         javascript = { "prettier" },
-        json = { "prettier" },
+        obf = { "prettier" },
         lua = { "stylua" },
       },
       format_on_save = {
