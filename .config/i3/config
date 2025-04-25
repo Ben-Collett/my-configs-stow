@@ -17,7 +17,6 @@ for_window [all] title_window_icon padding 1px
 # is used in the bar {} block below.
 font pango:monospace 8
 
-bindsym $mod+s exec steam
 bindsym $mod+Shift+s exec ~/.config/i3/killSteam.sh
 exec ~/my-configs-stow/autopush.py
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
