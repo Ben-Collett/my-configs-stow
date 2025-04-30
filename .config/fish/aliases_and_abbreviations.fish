@@ -33,8 +33,7 @@ abbr pcount 'math (ps -A | count)-1'
 abbr intellij idea
 abbr fokular org.kde.okular
 
-abbr jv17 'set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk/'
-abbr jv24 'set -x JAVA_HOME ~/programs/jdk-24/'
+abbr clo 'cloc -q --hide-rate .'
 
 alias sthing=$SOURCE_CODES/syncthing/bin/syncthing
 alias dart=/home/ben/programs/flutter/bin/dart
