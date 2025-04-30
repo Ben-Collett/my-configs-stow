@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#not needed in i3 or hyperland but needed in sway for some reason
+exec /usr/lib/xdg-desktop-portal-gtk
 set $mod Mod4
 
 for_window [class="Dolphin$"]  floating enable, move position center
