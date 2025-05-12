@@ -14,7 +14,7 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
-    },
+  },
   config = function()
     local cmp = require("cmp")
 
@@ -28,6 +28,9 @@ return {
     cmp.setup({
       completion = {
         completeopt = "menu,menuone,preview,noselect",
+      },
+      experimental = {
+        ghost_text = true,
       },
       snippet = { -- configure how nvim-cmp interacts with snippet engine
         expand = function(args)
@@ -45,7 +48,7 @@ return {
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
-        { name = "nvim_lsp"},
+        { name = "nvim_lsp" },
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
