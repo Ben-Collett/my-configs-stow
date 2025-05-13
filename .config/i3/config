@@ -11,6 +11,7 @@
 
 #not needed in i3 or hyperland but needed in sway for some reason
 exec /usr/lib/xdg-desktop-portal-gtk
+exec /usr/lib/xdg-desktop-portal-kde
 set $mod Mod4
 
 for_window [class="Dolphin$"]  floating enable, move position center
