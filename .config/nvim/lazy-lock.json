@@ -13,10 +13,10 @@
   "lspkind.nvim": { "branch": "master", "commit": "d79a1c3299ad0ef94e255d045bed9fa26025dab6" },
   "lualine.nvim": { "branch": "master", "commit": "15884cee63a8c205334ab13ab1c891cd4d27101a" },
   "marks.nvim": { "branch": "master", "commit": "f353e8c08c50f39e99a9ed474172df7eddd89b72" },
-  "mason-lspconfig.nvim": { "branch": "main", "commit": "d39a75bbce4b8aad5d627191ea915179c77c100f" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "20a9c13b689f9fa869c0eab5e33c6db529de3813" },
   "mason-nvim-dap.nvim": { "branch": "main", "commit": "4c2cdc69d69fe00c15ae8648f7e954d99e5de3ea" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "75d60a8f928decd8b38897f80849768b7c540a5b" },
-  "mason.nvim": { "branch": "main", "commit": "888d6ee499d8089a3a4be4309d239d6be1c1e6c0" },
+  "mason.nvim": { "branch": "main", "commit": "1aceba8bc158b5aaf90649077cad06744bc23ac4" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "f481de16a0eb59c985abac8985e3f2e2f75b4875" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nui.nvim": { "branch": "main", "commit": "f535005e6ad1016383f24e39559833759453564e" },
@@ -30,7 +30,7 @@
   "nvim-lspconfig": { "branch": "master", "commit": "ac1dfbe3b60e5e23a2cff90e3bd6a3bc88031a57" },
   "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
   "nvim-treesitter": { "branch": "master", "commit": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79" },
-  "nvim-treesitter-textobjects": { "branch": "master", "commit": "b0debd5c424969b4baeabdc8f54db3036c691732" },
+  "nvim-treesitter-textobjects": { "branch": "master", "commit": "a91cd95f50bf991106403cb02c5851b92e45820e" },
   "nvim-ufo": { "branch": "main", "commit": "3c7a3570e9c9dc198a2ad4491b0b0e51c4d4ba08" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
@@ -41,5 +41,5 @@
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "undotree": { "branch": "master", "commit": "b951b87b46c34356d44aa71886aecf9dd7f5788a" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "613b256ea9fed51027575d2818e4eba1ad1e3bc7" }
+  "yazi.nvim": { "branch": "main", "commit": "79633a2da69fbbb184b7841178bf1f02730d2942" }
 }
