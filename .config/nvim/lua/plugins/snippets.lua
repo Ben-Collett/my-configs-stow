@@ -52,6 +52,33 @@ function dart(ls, s, i, fmt, rep)
     dart,
     { s("inf", fmt([[{} {}({}) => {};]], { i(1, "returnType"), i(2, "funcName"), i(3, "parameters"), i(4) })) }
   )
+
+  ls.add_snippets(dart, {
+    s(
+      { trig = "MAKE_FUNCTION_PLZ ", snippetType = "autosnippet", wordTrig = true },
+      fmt(
+        [[
+        {} {}({}){{
+          {}
+        }}
+      ]],
+        { i(1, "void"), i(2, "func_name"), i(3), i(4) }
+      )
+    ),
+  })
+  ls.add_snippets(dart, {
+    s(
+      { trig = "DECLARE_CLASS_PLZ ", snippetType = "autosnippet", wordTrig = true },
+      fmt(
+        [[
+        class {}{{
+          {}
+        }}
+      ]],
+        { i(1, "ClassName"), i(2) }
+      )
+    ),
+  })
 end
 
 function java(ls, s, t, i, fmt, rep)
