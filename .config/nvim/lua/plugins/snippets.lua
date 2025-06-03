@@ -79,6 +79,17 @@ function dart(ls, s, i, fmt, rep)
       )
     ),
   })
+  ls.add_snippets(dart, {
+    s(
+      { trig = "PRINT_PLZ ", snippetType = "autosnippet", wordTrig = true },
+      fmt(
+        [[
+        print({})
+        ]],
+        { i(1) }
+      )
+    ),
+  })
 end
 
 function java(ls, s, t, i, fmt, rep)
