@@ -14,7 +14,7 @@ abbr lta 'eza -a| tail -n'
 abbr lh 'eza | head -n'
 abbr lha 'eza -a| head -n'
 
-abbr sh0 'shutdown now'
+abbr sh0 shutdown now
 abbr s0h 'shutdown now'
 abbr 0sh 'shutdown now'
 abbr h0s 'shutdown now'
