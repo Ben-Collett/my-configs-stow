@@ -1,1 +1,2 @@
 sudo ln -s ~/my-configs-stow/manual_symlinks/default.conf /etc/keyd/
+sudo ln -s ~/my-configs-stow/manual_symlinks/.scripts ~
