@@ -6,11 +6,16 @@ set -gx JAVA_HOME ~/java/bin
 set -gx MANPAGER "nvim +Man!"
 set -gx flutter_path /home/ben/programs/flutter/bin
 
+#update path
+fish_add_path ~/.cargo/bin/
+fish_add_path ~/.nix-profile/bin/
+fish_add_path $flutter_path
+
 #aliases
 alias sthing $SOURCE_CODES/syncthing/bin/syncthing
 alias dart /home/ben/programs/flutter/bin/dart
 
-#abbrs
+#abbreviations
 abbr ls eza --icons
 abbr sl eza --icons
 abbr sls eza --icons
