@@ -4,6 +4,5 @@ if status is-interactive
     source ~/.config/fish/keybindings.fish
     source ~/.config/fish_secrets.fish
 
-    fish_vi_key_bindings
     zoxide init fish | source
 end

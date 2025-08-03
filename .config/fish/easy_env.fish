@@ -1,3 +1,5 @@
+fish_vi_key_bindings
+
 #environment variables
 set -gx APP_IMAGE_PATH ~/Desktop/app_images
 set -gx SOURCE_CODES ~/Desktop/source_codes_for_building
