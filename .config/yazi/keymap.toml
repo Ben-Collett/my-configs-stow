@@ -96,3 +96,7 @@ desc = "execute the current selected file"
 on = ["c","o"]
 run = "shell 'codium $@' --confirm" 
 desc = "opens with codium"
+[[manager.prepend_keymap]]
+on = ["c","u"]
+run = "shell '$APP_IMAGE_PATH/Cursor-1.4.2-x86_64.AppImage $@' --confirm" 
+desc = "opens with codium"
