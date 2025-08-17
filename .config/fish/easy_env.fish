@@ -15,7 +15,7 @@ fish_add_path $flutter_path
 
 #aliases
 alias sthing $SOURCE_CODES/syncthing/bin/syncthing
-alias dart /home/ben/programs/flutter/bin/dart
+alias dart ~/programs/flutter/bin/dart
 
 #abbreviations
 abbr ls eza --icons
