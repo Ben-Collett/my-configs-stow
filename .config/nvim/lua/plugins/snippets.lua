@@ -1,19 +1,3 @@
-local function selected()
-  local start_pos = vim.fn.getpos("'<")
-  local end_pos = vim.fn.getpos("'>")
-
-  local start_line = start_pos[2]
-  local end_line = end_pos[2]
-
-  -- buffer‐indexed at 0, and end line is exclusive
-  local lines = vim.api.nvim_buf_get_lines(
-    0,
-    start_line - 1,
-    end_line, -- this is *inclusive* of the last line number
-    false -- don't strip newlines
-  )
-  return table.concat(lines, "\n")
-end
 function lua(ls, s, t, i, fmt, rep)
   local lua = "lua"
 end
