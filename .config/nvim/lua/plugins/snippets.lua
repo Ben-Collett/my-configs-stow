@@ -1,41 +1,38 @@
+local function define_auto_snippet(language, trig, content, args, ls, s, fmt)
+  ls.add_snippets(language, { s({ trig = trig, snippetType = "autosnippet", wordTrig = true }, fmt(content, args)) })
+end
+
+local function define_manual_snippet(language, trig, content, args, ls, s, fmt)
+  ls.add_snippets(language, { s(trig, fmt(content, args)) })
+end
+
 function lua(ls, s, t, i, fmt, rep)
   local lua = "lua"
 end
-function python(ls, s, t, i, fmt, rep)
-  ls.add_snippets("python", {
-    s(
-      { trig = "init", snippetType = "autosnippet", wordTrig = true },
-      fmt(
-        [[
+local function python(ls, s, t, i, fmt, rep)
+  local content = [[
       def __init__(self):
           {}
-      ]],
-        { i(1, "pass") }
-      )
-    ),
-  })
+      ]]
+  define_auto_snippet("python", "init", content, { i(1, "pass") }, ls, s, fmt)
 end
 
 function dart(ls, s, i, fmt, rep)
   local dart = "dart"
-  ls.add_snippets(dart, {
-    s(
-      "si",
-      fmt(
-        [[
+  local content = [[
   class {}{{
     {}._privateConstructor();
     static final {} _internal = {}._privateConstructor();
     factory {}()=> _internal;
-    }}]],
-        { i(1), rep(1), rep(1), rep(1), rep(1) }
-      )
-    ),
-  })
-  ls.add_snippets(
-    dart,
-    { s("inf", fmt([[{} {}({}) => {};]], { i(1, "returnType"), i(2, "funcName"), i(3, "parameters"), i(4) })) }
-  )
+    }}]]
+  local args = { i(1), rep(1), rep(1), rep(1), rep(1) }
+
+  define_manual_snippet("dart", "si", content, args, ls, s, fmt)
+
+  args = { i(1, "returnType"), i(2, "funcName"), i(3, "parameters"), i(4) }
+  content = [[{} {}({}) => {};]]
+
+  define_manual_snippet("dart", "inf", content, args, ls, s, fmt)
 
   ls.add_snippets(dart, {
     s(
