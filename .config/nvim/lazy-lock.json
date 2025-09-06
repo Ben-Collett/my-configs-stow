@@ -42,5 +42,5 @@
   "undotree": { "branch": "master", "commit": "fe9a9d0645f0f5532360b5e5f5c550d7bb4f1869" },
   "vimtex": { "branch": "master", "commit": "dc90feacb86f7b85b0b791d8073eefc769a23725" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "54ffef7beb192cc48cdd178723c458feef0f8d78" }
+  "yazi.nvim": { "branch": "main", "commit": "88a74bddd74d51cfe01706a86dcc69cb79259862" }
 }

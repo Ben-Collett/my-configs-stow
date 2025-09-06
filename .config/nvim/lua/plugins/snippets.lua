@@ -18,7 +18,6 @@ local function python(ls, s, t, i, fmt, rep)
 end
 
 function dart(ls, s, i, fmt, rep)
-  local dart = "dart"
   local content = [[
   class {}{{
     {}._privateConstructor();
@@ -34,43 +33,27 @@ function dart(ls, s, i, fmt, rep)
 
   define_manual_snippet("dart", "inf", content, args, ls, s, fmt)
 
-  ls.add_snippets(dart, {
-    s(
-      { trig = "MAKE_FUNCTION_PLZ ", snippetType = "autosnippet", wordTrig = true },
-      fmt(
-        [[
+  args = { i(1, "void"), i(2, "funcName"), i(3), i(4) }
+  content = [[
         {} {}({}){{
           {}
         }}
-      ]],
-        { i(1, "void"), i(2, "func_name"), i(3), i(4) }
-      )
-    ),
-  })
-  ls.add_snippets(dart, {
-    s(
-      { trig = "DECLARE_CLASS_PLZ ", snippetType = "autosnippet", wordTrig = true },
-      fmt(
-        [[
+      ]]
+
+  define_auto_snippet("dart", "MAKE_FUNCTION_PLZ ", content, args, ls, s, fmt)
+
+  args = { i(1, "ClassName"), i(2) }
+  content = [[
         class {}{{
           {}
         }}
-      ]],
-        { i(1, "ClassName"), i(2) }
-      )
-    ),
-  })
-  ls.add_snippets(dart, {
-    s(
-      { trig = "PRINT_PLZ ", snippetType = "autosnippet", wordTrig = true },
-      fmt(
-        [[
-        print({})
-        ]],
-        { i(1) }
-      )
-    ),
-  })
+      ]]
+
+  define_auto_snippet("dart", "DECLARE_CLASS_PLZ ", content, args, ls, s, fmt)
+
+  args = { i(1) }
+  content = "print({});"
+  define_auto_snippet("dart", "PRINT_PLZ ", content, args, ls, s, fmt)
 end
 
 function java(ls, s, t, i, fmt, rep)
