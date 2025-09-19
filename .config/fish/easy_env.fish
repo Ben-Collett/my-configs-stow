@@ -33,6 +33,8 @@ abbr lt 'eza | tail -n'
 abbr lta 'eza -a| tail -n'
 abbr lh 'eza | head -n'
 abbr lha 'eza -a| head -n'
+abbr ust git reset
+abbr unstage git reset
 abbr sh0 shutdown now
 abbr s0h shutdown now
 abbr 0sh shutdown now
