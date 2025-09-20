@@ -9,17 +9,8 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
-    lspconfig.nushell.setup({
-      cmd = { "nu", "--lsp" },
-      single_file_support = true,
-    })
-    lspconfig.fish_lsp.setup({
-      cmd = { "fish-lsp", "start" },
-      single_file_support = true,
-      fish_lsp_show_client_popups = false,
-    })
-
-    local mason_lspconfig = require("mason-lspconfig")
+    vim.lsp.config("nu", { cmd = { "nu", "--lsp" }, single_file_support = true, filetypes = { "nu" } })
+    vim.lsp.enable("nu")
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
