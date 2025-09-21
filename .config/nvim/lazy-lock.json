@@ -21,7 +21,7 @@
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
-  "nvim-dap": { "branch": "master", "commit": "11b97cbeef18d136f5a9897baacad5fc60367110" },
+  "nvim-dap": { "branch": "master", "commit": "7367cec8e8f7a0b1e4566af9a7ef5959d11206a7" },
   "nvim-dap-python": { "branch": "master", "commit": "bfe572e4458e0ac876b9539a1e9f301c72db8ea0" },
   "nvim-dap-ui": { "branch": "master", "commit": "cf91d5e2d07c72903d052f5207511bf7ecdb7122" },
   "nvim-dap-virtual-text": { "branch": "master", "commit": "fbdb48c2ed45f4a8293d0d483f7730d24467ccb6" },
@@ -42,5 +42,5 @@
   "undotree": { "branch": "master", "commit": "fe9a9d0645f0f5532360b5e5f5c550d7bb4f1869" },
   "vimtex": { "branch": "master", "commit": "77f31bd02cec678823c8614e6400db97390b5ce7" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "f0173e4133b46c2503bf6582e799fd82708c28fe" }
+  "yazi.nvim": { "branch": "main", "commit": "fda4736c8c4e6eb7035ab9c0be1c17fa9dca0b6e" }
 }
