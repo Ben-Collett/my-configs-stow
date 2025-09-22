@@ -6,9 +6,6 @@ local function define_manual_snippet(language, trig, content, args, ls, s, fmt)
   ls.add_snippets(language, { s(trig, fmt(content, args)) })
 end
 
-function lua(ls, s, t, i, fmt, rep)
-  local lua = "lua"
-end
 local function python(ls, s, t, i, fmt, rep)
   local content = [[
       def __init__(self):
@@ -17,7 +14,7 @@ local function python(ls, s, t, i, fmt, rep)
   define_auto_snippet("python", "init", content, { i(1, "pass") }, ls, s, fmt)
 end
 
-function dart(ls, s, i, fmt, rep)
+local function dart(ls, s, i, fmt, rep)
   local content = [[
   class {}{{
     {}._privateConstructor();
@@ -89,14 +86,13 @@ return {
     ls.config.set_config({
       enable_autosnippets = true,
     })
-    skey = vim.keymap.set
+    local skey = vim.keymap.set
     skey({ "i", "v" }, "<C-L>", function()
       ls.jump(1)
     end)
     skey({ "i", "v" }, "<C-H>", function()
       ls.jump(-1)
     end)
-    lua(ls, s, t, i, fmt, rep)
     dart(ls, s, i, fmt, rep)
     python(ls, s, t, i, fmt, rep)
     vim.keymap.set({ "v", "n" }, "<leader>wi", function()
