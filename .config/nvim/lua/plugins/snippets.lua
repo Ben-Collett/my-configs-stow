@@ -5,70 +5,64 @@ end
 local function define_manual_snippet(language, trig, content, args, ls, s, fmt)
   ls.add_snippets(language, { s(trig, fmt(content, args)) })
 end
-
-local function python(ls, s, t, i, fmt, rep)
-  local content = [[
-      def __init__(self):
-          {}
-      ]]
-  define_auto_snippet("python", "init", content, { i(1, "pass") }, ls, s, fmt)
-end
-
-local function dart(ls, s, i, fmt, rep)
-  local content = [[
-  class {}{{
-    {}._privateConstructor();
-    static final {} _internal = {}._privateConstructor();
-    factory {}()=> _internal;
-    }}]]
-  local args = { i(1), rep(1), rep(1), rep(1), rep(1) }
-
-  define_manual_snippet("dart", "si", content, args, ls, s, fmt)
-
-  args = { i(1, "returnType"), i(2, "funcName"), i(3, "parameters"), i(4) }
-  content = [[{} {}({}) => {};]]
-
-  define_manual_snippet("dart", "inf", content, args, ls, s, fmt)
-
-  args = { i(1, "void"), i(2, "funcName"), i(3), i(4) }
-  content = [[
-        {} {}({}){{
-          {}
-        }}
-      ]]
-
-  define_auto_snippet("dart", "MAKE_FUNCTION_PLZ ", content, args, ls, s, fmt)
-
-  args = { i(1, "ClassName"), i(2) }
-  content = [[
-        class {}{{
-          {}
-        }}
-      ]]
-
+local function dart(ls, s, t, i, fmt, rep)
+  local args = { i(1, "className"), i(2), i(3) }
+  local content = [[class {}{{
+  {}
+}}{}]]
   define_auto_snippet("dart", "DECLARE_CLASS_PLZ ", content, args, ls, s, fmt)
-
-  args = { i(1) }
-  content = "print({});"
-  define_auto_snippet("dart", "PRINT_PLZ ", content, args, ls, s, fmt)
+  args = { i(1, "name"), i(2, "value"), i(3) }
+  content = [[final {} = {};{}]]
+  define_auto_snippet("dart", "immutable", content, args, ls, s, fmt)
+  args = { i(1, "int"), i(2, "name"), i(3, "value") }
+  content = [[{} get {}=>{};]]
+  define_auto_snippet("dart", "getter_fat_arrow", content, args, ls, s, fmt)
+  args = { i(1, "conditional"), i(2), i(3) }
+  content = [[if({}){{
+  {}
+}}{}]]
+  define_auto_snippet("dart", "if", content, args, ls, s, fmt)
+  args = { i(1, "name"), i(2, "int"), i(3, "value"), i(4, "content"), i(5) }
+  content = [[set {}({} {}){{
+  {}
+}}{}]]
+  define_auto_snippet("dart", "setter", content, args, ls, s, fmt)
+  args = { i(1, "void"), i(2, "name"), i(3, "params"), i(4, "content"), i(5) }
+  content = [[{} {}({}){{
+  {}
+  }}{}]]
+  define_auto_snippet("dart", "function", content, args, ls, s, fmt)
+  args = { i(1, "name"), i(2, "value"), i(3) }
+  content = [[const {} = {};{}]]
+  define_auto_snippet("dart", "DECLARE_CONST_PLZ ", content, args, ls, s, fmt)
+  args = { i(1, "var"), i(2, "name"), i(3, "value"), i(4) }
+  content = [[{} {} = {};
+{}]]
+  define_auto_snippet("dart", "DECLARE_VAR_PLZ ", content, args, ls, s, fmt)
+  args = { i(1, "content"), i(2) }
+  content = [[print({});{}]]
+  define_auto_snippet("dart", "print", content, args, ls, s, fmt)
+  args = { i(1, "void"), i(2, "name"), i(3, "params"), i(4, "content") }
+  content = [[{} {}({}) => {}]]
+  define_auto_snippet("dart", "function_short", content, args, ls, s, fmt)
+  args = { i(1, "int"), i(2, "name"), i(3, "content"), i(4, "return"), i(5) }
+  content = [[{} get {}{{
+  {}
+  return {};
+}}{}]]
+  define_auto_snippet("dart", "getter", content, args, ls, s, fmt)
+end
+local function python(ls, s, t, i, fmt, rep)
+  local args = { i(1, "pass") }
+  local content = [[def __init__(self):
+  {}]]
+  define_auto_snippet("python", "init", content, args, ls, s, fmt)
+end
+local function set_up_snippets(ls, s, t, i, fmt, rep)
+  dart(ls, s, t, i, fmt, rep)
+  python(ls, s, t, i, fmt, rep)
 end
 
-function java(ls, s, t, i, fmt, rep)
-  ls.add_snippets("java", {
-    s(
-      "test",
-      fmt(
-        [[
-  @Test
-  public void {} {{
-      {}
-  }}]],
-        i(1),
-        i(2)
-      )
-    ),
-  })
-end
 return {
   "L3MON4D3/LuaSnip",
   -- follow latest release.
@@ -93,8 +87,7 @@ return {
     skey({ "i", "v" }, "<C-H>", function()
       ls.jump(-1)
     end)
-    dart(ls, s, i, fmt, rep)
-    python(ls, s, t, i, fmt, rep)
+    set_up_snippets(ls, s, t, i, fmt, rep)
     vim.keymap.set({ "v", "n" }, "<leader>wi", function()
       --local selected = selected()
       --vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(":'<,'>delete<CR>i", true, false, true), "n", false)
