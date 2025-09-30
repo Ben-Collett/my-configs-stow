@@ -67,6 +67,7 @@ bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+Shift+f exec "swaymsg floating toggle"
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "dmenu_path | dmenu -f | /usr/bin/fish"
