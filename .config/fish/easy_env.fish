@@ -14,7 +14,6 @@ fish_add_path ~/.nix-profile/bin/
 fish_add_path $flutter_path
 
 #aliases
-alias sthing $SOURCE_CODES/syncthing/bin/syncthing
 alias dart ~/programs/flutter/bin/dart
 
 #abbreviations
