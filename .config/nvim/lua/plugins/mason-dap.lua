@@ -5,6 +5,10 @@ return {
     require("mason").setup()
   end,
   opts = {
+    auto_update = true,
+    run_on_start = true,
+    start_delay = 300,
+    debounce_hours = 24,
     handlers = {
       python = function(source_name)
         local dap = require("dap")
@@ -26,6 +30,7 @@ return {
           },
         }
       end,
+
       dart = function(source_name)
         local dap = require("dap")
         dap.adapters.python = {

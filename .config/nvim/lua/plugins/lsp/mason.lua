@@ -30,20 +30,19 @@ return {
         "html",
         "cssls",
         "lua_ls",
-	"jqls",
-	"jsonls",
-	"ltex",
-	"rnix",
-	"sqls",
-	"asm_lsp",
-	"bashls"
+        "jqls",
+        "jsonls",
+        "ltex",
+        "rnix",
+        "sqls",
+        "asm_lsp",
+        "bashls",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
-        "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
         "pylint",
