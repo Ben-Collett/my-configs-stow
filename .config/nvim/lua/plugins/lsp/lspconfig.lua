@@ -12,6 +12,46 @@ return {
     vim.lsp.config("nu", { cmd = { "nu", "--lsp" }, single_file_support = true, filetypes = { "nu" } })
     vim.lsp.enable("nu")
 
+    vim.lsp.config("rust_analyzer", {
+      cmd = { "rust-analyzer" },
+      filetypes = { "rust" },
+
+      -- Automatically detect project roots
+      root_dir = vim.fs.dirname(vim.fs.find({ "Cargo.toml", ".git" }, { upward = true })[1]),
+
+      -- Capabilities let the LSP support completion, snippets, etc.
+      capabilities = vim.lsp.protocol.make_client_capabilities(),
+
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true, -- pick up optional features too
+            loadOutDirsFromCheck = true,
+          },
+          procMacro = {
+            enable = true, -- expand procedural macros
+          },
+          checkOnSave = true,
+          inlayHints = {
+            enable = true,
+            typeHints = true,
+            parameterHints = true,
+            chainingHints = true,
+            closingBraceHints = true,
+          },
+        },
+      },
+
+      -- You can define custom on_attach if you want LSP keymaps or behavior
+      on_attach = function(client, bufnr)
+        -- Example: enable inlay hints if available
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end
+      end,
+    })
+    vim.lsp.enable("rust_analyzer")
+
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
