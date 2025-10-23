@@ -17,11 +17,16 @@ fish_add_path $flutter_path
 alias dart ~/programs/flutter/bin/dart
 
 #abbreviations
-abbr ls eza --icons
+abbr tig git
+abbr itg git
+abbr tgi git
+abbr gti git
+abbr igt git
 abbr sl eza --icons
+abbr ls eza --icons
 abbr sls eza --icons
-abbr la eza -a --icons
 abbr al eza -a --icons
+abbr la eza -a --icons
 abbr ll eza -l --icons
 abbr lla eza -al --icons
 abbr lal eza -al --icons
@@ -34,13 +39,20 @@ abbr lh 'eza | head -n'
 abbr lha 'eza -a| head -n'
 abbr ust git reset
 abbr unstage git reset
-abbr sh0 shutdown now
-abbr s0h shutdown now
-abbr 0sh shutdown now
 abbr h0s shutdown now
+abbr 0hs shutdown now
+abbr s0h shutdown now
+abbr hs0 shutdown now
+abbr 0sh shutdown now
+abbr sh0 shutdown now
+abbr rsh shutdown -r now
+abbr rhs shutdown -r now
 abbr shr shutdown -r now
-abbr cl clear
+abbr hsr shutdown -r now
+abbr srh shutdown -r now
+abbr hrs shutdown -r now
 abbr lc clear
+abbr cl clear
 abbr dc cd
 abbr cn nmtui
 abbr mkp mkdir -p
