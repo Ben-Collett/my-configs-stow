@@ -28,6 +28,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
 vim.keymap.set("t", "<C-;>", [[<C-\><C-n>]])
+vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<cr>")
 
 local vim = vim
 local api = vim.api
