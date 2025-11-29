@@ -1,11 +1,13 @@
 local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
-
+config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9
+wezterm.on("log_event", function(window, pane)
+	wezterm.log_info("hello")
+end)
 --config.window_decorations = "NONE"
 config.exit_behavior = "Close"
-
 config.keys = {
 	{ key = "1", mods = "CTRL", action = wezterm.action({ ActivateTab = 0 }) },
 	{ key = "2", mods = "CTRL", action = wezterm.action({ ActivateTab = 1 }) },
@@ -29,7 +31,9 @@ config.keys = {
 	{ key = "l", mods = "ALT|SHIFT", action = wezterm.action({ ActivatePaneDirection = "Right" }) },
 }
 local cursor_color = "#A400D3"
+local bg = "#000000"
 config.colors = {
+	background = bg,
 	cursor_bg = cursor_color,
 }
 local colors = {

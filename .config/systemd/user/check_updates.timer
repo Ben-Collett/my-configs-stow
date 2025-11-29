@@ -1,0 +1,12 @@
+[Unit]
+Description=Run update check every 2 hours
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2h
+Unit=update-check.service
+Persistent=true
+
+[Install]
+WantedBy=default.target
+

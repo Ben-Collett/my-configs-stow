@@ -9,8 +9,20 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
+    -- local default_cap = require("cmp_nvim_lsp").default_capabilities()
     vim.lsp.config("nu", { cmd = { "nu", "--lsp" }, single_file_support = true, filetypes = { "nu" } })
     vim.lsp.enable("nu")
+    vim.lsp.config("dartls", {
+      flags = {
+        allow_incremental_sync = false,
+      },
+    })
+    vim.lsp.enable("dartls")
+    -- lspconfig.dartls.setup({
+    --   capabilities = default_cap,
+    --   flags = { allow_incremental_sync = false },
+    --   cmd = { "dart", "language-server", "--protocol=lsp" },
+    -- })
 
     vim.lsp.config("rust_analyzer", {
       cmd = { "rust-analyzer" },
