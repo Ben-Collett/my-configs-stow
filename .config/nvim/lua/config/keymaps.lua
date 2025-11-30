@@ -30,5 +30,9 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("t", "<C-;>", [[<C-\><C-n>]])
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<cr>")
 
-local vim = vim
-local api = vim.api
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>xe",
+  "<cmd>Trouble diagnostics filter.severity=vim.diagnostic.severity.ERROR<cr>",
+  { noremap = true, silent = true }
+)
