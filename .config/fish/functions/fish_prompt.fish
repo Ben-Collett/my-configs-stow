@@ -1,1 +1,1 @@
-/home/ben/.config/fish/prompts/thanks_giving.fish
+/home/ben/.config/fish/prompts/christmas.fish
