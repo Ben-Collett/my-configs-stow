@@ -29,15 +29,24 @@ local function dart(ls, s, t, i, fmt, rep)
   args = {i(1,"void"),i(2,"name"),i(3,"params"),i(4,"content"),i(5)}
   content = "{} {}({}){{\n  {}\n  }}{}"
   define_auto_snippet("dart", "DECLARE_FUNCTION_PLZ", content, args, ls, s, fmt)
+  args = {i(1,"void"),i(2,"name"),i(3,"params"),i(4,"content"),i(5)}
+  content = "{} {}({}){{\n  {}\n  }}{}"
+  define_auto_snippet("dart", "fuu", content, args, ls, s, fmt)
   args = {i(1,"name"),i(2,"value"),i(3)}
   content = "const {} = {};{}"
   define_auto_snippet("dart", "DECLARE_CONST_PLZ", content, args, ls, s, fmt)
+  args = {i(1,"name"),i(2,"value"),i(3)}
+  content = "const {} = {};{}"
+  define_auto_snippet("dart", "coo", content, args, ls, s, fmt)
   args = {i(1,"var"),i(2,"name"),i(3,"value"),i(4)}
   content = "{} {} = {};\n{}"
   define_auto_snippet("dart", "DECLARE_VAR_PLZ", content, args, ls, s, fmt)
+  args = {i(1,"var"),i(2,"name"),i(3,"value"),i(4)}
+  content = "{} {} = {};\n{}"
+  define_auto_snippet("dart", "mtt", content, args, ls, s, fmt)
   args = {i(1,"content"),i(2)}
   content = "print({});{}"
-  define_auto_snippet("dart", "print", content, args, ls, s, fmt)
+  define_auto_snippet("dart", "prr", content, args, ls, s, fmt)
   args = {i(1,"content"),i(2)}
   content = "print({});{}"
   define_auto_snippet("dart", "PRINT_PLZ", content, args, ls, s, fmt)
@@ -72,15 +81,21 @@ local function python(ls, s, t, i, fmt, rep)
   args = {i(1,"params"),i(2,"pass")}
   content = "def name({}):\n  {}"
   define_auto_snippet("python", "DECLARE_FUNCTION_PLZ", content, args, ls, s, fmt)
+  args = {i(1,"params"),i(2,"pass")}
+  content = "def name({}):\n  {}"
+  define_auto_snippet("python", "fuu", content, args, ls, s, fmt)
   args = {i(1,"name"),i(2,"value")}
   content = "{} = {}"
   define_auto_snippet("python", "DECLARE_CONST_PLZ", content, args, ls, s, fmt)
+  args = {i(1,"name"),i(2,"value")}
+  content = "{} = {}"
+  define_auto_snippet("python", "coo", content, args, ls, s, fmt)
   args = {i(1,"pass")}
   content = "def __init__(self):\n  {}"
   define_auto_snippet("python", "init", content, args, ls, s, fmt)
   args = {i(1,"")}
   content = "print({})"
-  define_auto_snippet("python", "print", content, args, ls, s, fmt)
+  define_auto_snippet("python", "prr", content, args, ls, s, fmt)
   args = {i(1,"")}
   content = "print({})"
   define_auto_snippet("python", "PRINT_PLZ", content, args, ls, s, fmt)
