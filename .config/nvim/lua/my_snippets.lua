@@ -20,6 +20,9 @@ local function dart(ls, s, t, i, fmt, rep)
   args = {i(1,"int"),i(2,"name"),i(3,"value")}
   content = "{} get {}=>{};"
   define_auto_snippet("dart", "getter_fat_arrow", content, args, ls, s, fmt)
+  args = {i(1,"name"),i(2,"iterable"),i(3),i(4)}
+  content = "for(const {} in {}) {{\n  {}\n}}{}"
+  define_auto_snippet("dart", "fcc", content, args, ls, s, fmt)
   args = {i(1,"name"),i(2,"int"),i(3,"value"),i(4,"content"),i(5)}
   content = "set {}({} {}){{\n  {}\n}}{}"
   define_auto_snippet("dart", "setter", content, args, ls, s, fmt)
