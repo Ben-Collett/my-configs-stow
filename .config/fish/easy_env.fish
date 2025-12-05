@@ -12,22 +12,23 @@ set -gx flutter_path /home/ben/programs/flutter/bin
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.nix-profile/bin/
 fish_add_path ~/app_images/
+fish_add_path ~/.local/bin/
 fish_add_path $flutter_path
 
 #aliases
 alias dart ~/programs/flutter/bin/dart
 
 #abbreviations
+abbr gti git
+abbr tig git
+abbr itg git
 abbr igt git
 abbr tgi git
-abbr itg git
-abbr tig git
-abbr gti git
 abbr sl eza --icons
 abbr ls eza --icons
 abbr sls eza --icons
-abbr la eza -a --icons
 abbr al eza -a --icons
+abbr la eza -a --icons
 abbr ll eza -l --icons
 abbr lla eza -al --icons
 abbr lal eza -al --icons
@@ -43,15 +44,15 @@ abbr unstage git reset
 abbr hs0 shutdown now
 abbr sh0 shutdown now
 abbr h0s shutdown now
-abbr 0hs shutdown now
 abbr 0sh shutdown now
 abbr s0h shutdown now
+abbr 0hs shutdown now
 abbr srh shutdown -r now
-abbr rsh shutdown -r now
-abbr shr shutdown -r now
-abbr rhs shutdown -r now
 abbr hsr shutdown -r now
+abbr rhs shutdown -r now
 abbr hrs shutdown -r now
+abbr shr shutdown -r now
+abbr rsh shutdown -r now
 abbr cl clear
 abbr lc clear
 abbr dc cd
