@@ -1,22 +1,17 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "c578505"
-hash = "e6e303d9434a49e05362494a813534c9"
+rev = "398796d"
+hash = "73788c7dc5827ef4677c502c3ea8fa19"
 
 [[plugin.deps]]
 use = "Ape/open-with-cmd"
-rev = "8d7abc8"
-hash = "b562a73ad1413134968d9a949ab8eb1b"
+rev = "433cf30"
+hash = "86e0312b01bc5762813c6c1d0517f073"
 
 [[plugin.deps]]
 use = "Ape/mediainfo"
 rev = "c69314e"
-hash = ""
-
-[[plugin.deps]]
-use = "Ape/smart-enter"
-rev = "7bf44b7"
-hash = "302d69266883f5607db19aaeed88feb4"
+hash = "99aa06d3014798d86001c324468d497f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
@@ -32,6 +27,11 @@ hash = "6de1e859aa4f9832aa00a1a65e552ea3"
 use = "yazi-rs/plugins:mount"
 rev = "2301ff8"
 hash = "4fccaaf10c36dc2466e2438a386ff017"
+
+[[plugin.deps]]
+use = "Ape/smart-enter"
+rev = "7b84c89"
+hash = "43eb1a1f2291795fb5b0b2ce1206ebee"
 
 [flavor]
 deps = []
