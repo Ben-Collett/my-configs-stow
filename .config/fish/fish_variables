@@ -16,4 +16,4 @@ SETUVAR _fisher_plugins:jorgebucaran/fisher\x1e/home/ben/\x2econfig/fish/themes/
 SETUVAR _fisher_qiuxiang_2F_flutter_2D_fish_2D_completions_files:\x7e/\x2econfig/fish/completions/flutter\x2efish
 SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_40_v2_2E_31_2E_30__files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_user_paths:/home/ben/\x2elocal/bin\x1e/home/ben/app_images\x1e/home/ben/programs/flutter/bin\x1e/home/ben/\x2enix\x2dprofile/bin\x1e/home/ben/\x2ecargo/bin
+SETUVAR fish_user_paths:/home/ben/\x2escripts\x1e/home/ben/\x2elocal/bin\x1e/home/ben/app_images\x1e/home/ben/programs/flutter/bin\x1e/home/ben/\x2enix\x2dprofile/bin\x1e/home/ben/\x2ecargo/bin
