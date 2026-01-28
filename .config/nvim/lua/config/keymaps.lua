@@ -3,8 +3,8 @@
 -- gx lets you follow a url appareantly
 -- Add any additional keymaps here
 vim.g.mapleader = " " --also set in lazy plugin but doesnt seem to work for some reason
-vim.keymap.set("i", "FD", '<ESC>"+pa')
-vim.keymap.set("i", "DF", "<ESC>pa")
+-- vim.keymap.set("i", "FD", '<ESC>"+pa')
+-- vim.keymap.set("i", "DF", "<ESC>pa")
 vim.keymap.set("i", "<C-H>", "<ESC>dbxi")
 vim.keymap.set({ "n", "i" }, "<C-A>", "<ESC>caw")
 vim.api.nvim_set_keymap("n", "'a", "`a", { noremap = true, silent = true })
