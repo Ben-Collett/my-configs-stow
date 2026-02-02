@@ -62,7 +62,7 @@ function M.ensure_connected()
   end)
 end
 
-function M.send_clear_buffer()
+function M.send_message(msg)
   M.ensure_connected()
 
   if not M.connected or not M.client then
@@ -70,7 +70,7 @@ function M.send_clear_buffer()
   end
 
   local ok = pcall(function()
-    M.client:write("c\n")
+    M.client:write(msg:len() .. "\n" .. msg)
   end)
 
   if not ok then
@@ -80,5 +80,8 @@ function M.send_clear_buffer()
     end)
     M.client = nil
   end
+end
+function M.send_clear_buffer()
+  M.send_message("cb")
 end
 return M
