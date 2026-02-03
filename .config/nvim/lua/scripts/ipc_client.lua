@@ -1,4 +1,4 @@
---WARN AI
+--WARNING AI
 local uv = vim.loop
 
 local M = {}
@@ -81,7 +81,38 @@ function M.send_message(msg)
     M.client = nil
   end
 end
+function M.normal_casing()
+  M.send_message("mc")
+end
+
+function M.snake_casing()
+  M.send_message("sc")
+end
+function M.proper_casing()
+  M.send_message("pm")
+end
+function M.camel_casing()
+  M.send_message("cm")
+end
+function M.upper_snake_casing()
+  M.send("us")
+end
+
+function M.reload_config()
+  M.send("rl")
+end
+function M.restart()
+  M.send("rs")
+end
+
 function M.send_clear_buffer()
   M.send_message("cb")
 end
+function M.set_main_buffer(text)
+  M.send_message("sm " .. text)
+end
+function M.set_right_buffer(text)
+  M.send_message("sr " .. text)
+end
+
 return M
