@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 require("config.keymaps")
 require("config.lazy")
 --also has keymaps
-require("scripts.load_scripts")
+-- require("scripts.load_scripts")
 
 require("config.style")
 vim.filetype.add({
@@ -11,11 +11,8 @@ vim.filetype.add({
     obf = "json",
   },
 })
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-	  print("hi")
-  end,
-})
--- vim.defer_fn(function()
---   print("hi")
--- end, 100)
+-- vim.api.nvim_create_autocmd("UIEnter", {
+--   callback = function()
+--     print("hi")
+--   end,
+-- })

@@ -17,7 +17,7 @@ vim.cmd("colorscheme mytheme")
 vim.cmd("TSEnable highlight")
 
 --toggles the cmd height so I don't loose lua line when I enter command mode
--- vim.opt.cmdheight = 0
+vim.opt.cmdheight = 0
 -- Create an autocommand group
 local augroup = vim.api.nvim_create_augroup("CmdModeEvents", { clear = true })
 
