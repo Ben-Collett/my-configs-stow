@@ -11,3 +11,11 @@ vim.filetype.add({
     obf = "json",
   },
 })
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+	  print("hi")
+  end,
+})
+-- vim.defer_fn(function()
+--   print("hi")
+-- end, 100)
