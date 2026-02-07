@@ -4,6 +4,20 @@ return {
   opts = {
     -- add any options here
   },
+  config = function()
+    local noice = require("noice")
+    noice.setup({
+      routes = {
+        {
+          filter = {
+            event = "lsp",
+            kind = "progress",
+          },
+          opts = { skip = true },
+        },
+      },
+    })
+  end,
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",

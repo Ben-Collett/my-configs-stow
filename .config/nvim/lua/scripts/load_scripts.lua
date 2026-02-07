@@ -8,5 +8,3 @@ vim.keymap.set(
   replace_word.replace_under_cursor, -- directly call the function
   { noremap = true, silent = true, desc = "Replace word under cursor" }
 )
-
-require("scripts.set_up_chips")
