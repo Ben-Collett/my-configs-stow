@@ -126,21 +126,27 @@ return {
           runtime = {
             version = "LuaJIT",
           },
+
           diagnostics = {
-            globals = {
-              "vim",
-              "require",
+            globals = { "vim" },
+          },
+
+          workspace = {
+            library = {
+              vim.env.VIMRUNTIME,
+              -- or this if you want *everything*
+              -- unpack(vim.api.nvim_get_runtime_file("", true)),
             },
-            workspace = {
-              library = vim.api.nvim_get_runtime_file("", true), -- Include runtime files for Neovim
-            },
-            telemetry = {
-              enable = false, -- Disable telemetry if you prefer privacy
-            },
+            checkThirdParty = false,
+          },
+
+          telemetry = {
+            enable = false,
           },
         },
       },
     })
+    --
     -- Change the Diagnostic symbols in the sign column (gutter)
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do

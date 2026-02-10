@@ -49,6 +49,6 @@
   "vim-wordmotion": { "branch": "master", "commit": "81d9bd298376ab0dc465c85d55afa4cb8d5f47a1" },
   "vimtex": { "branch": "master", "commit": "f707368022cdb851716be0d2970b90599c84a6a6" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "fac5ebc2fdc7ce856849b47beca06e6f7d2b1800" },
+  "yazi.nvim": { "branch": "main", "commit": "2c7951bf48e60e5b3434b7e0fe48f7ba965c3a25" },
   "yuck.vim": { "branch": "master", "commit": "9b5e0370f70cc30383e1dabd6c215475915fe5c3" }
 }
