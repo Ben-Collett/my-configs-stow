@@ -1,2 +1,4 @@
 .config/mpv/watch_later/
+.config/nvim/lazyvim.json
+.config/nvim/lazy-lock.json
 
