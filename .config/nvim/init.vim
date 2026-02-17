@@ -1,0 +1,1 @@
+/home/ben/Documents/my_shit/python/easy_sym_farm/test_source/.config/nvim/init.vim
