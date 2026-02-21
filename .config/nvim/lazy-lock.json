@@ -11,7 +11,7 @@
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "indent-blankline.nvim": { "branch": "master", "commit": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
-  "live-preview.nvim": { "branch": "main", "commit": "f056b4b859d54595afce53e67129f7684380d3ba" },
+  "live-preview.nvim": { "branch": "main", "commit": "4bbcbe79948b2726f00b5217277abd1e2651e699" },
   "lspkind.nvim": { "branch": "master", "commit": "c7274c48137396526b59d86232eabcdc7fed8a32" },
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "markdown-plus.nvim": { "branch": "main", "commit": "438ea474f8f12993244c195b883dc1924a709086" },
@@ -49,6 +49,6 @@
   "vim-wordmotion": { "branch": "master", "commit": "81d9bd298376ab0dc465c85d55afa4cb8d5f47a1" },
   "vimtex": { "branch": "master", "commit": "95b93a24740f7b89dd8331326b41bdd1337d79f6" },
   "wezterm.nvim": { "branch": "main", "commit": "032c33b621b96cc7228955b4352b48141c482098" },
-  "yazi.nvim": { "branch": "main", "commit": "776b4756437c981ef3a8ca7e6b127f9270bfb9d1" },
+  "yazi.nvim": { "branch": "main", "commit": "9466389d99ee8e669fce8b78e96abd6b4ec0e560" },
   "yuck.vim": { "branch": "master", "commit": "9b5e0370f70cc30383e1dabd6c215475915fe5c3" }
 }
