@@ -1,0 +1,5 @@
+mpv/watch_later/
+editors/emacs/straight/
+editors/emacs/eln-cache/
+yazi/plugins/
+shells/*/easy_env.*

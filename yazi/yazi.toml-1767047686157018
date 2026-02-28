@@ -1,0 +1,30 @@
+[manager]
+show_hidden = true
+show_symlink = true
+
+
+[opener]
+wine = [
+	{ run = 'wine "$@"', orphan = true, for = "unix"}
+	]
+libre_office = [
+	{ run = 'libreoffice "$@"', orphan = true, for = "unix"}
+]
+tar_xz = [
+  { run = 'tar -xf "$@"', orphan = true, for = 'unix'}
+]
+tar_gz = [
+  { run = 'tar -xzf "$@"', orphan = true, for = 'unix'}
+]
+zip = [
+  {run = '7z e "$@"', orphan = true}
+]
+[open]
+prepend_rules = [{name = "*.exe", use = ["wine", "open"]},
+		{name = "*.odt", use = ["libre_office"]},
+    {name = "*.tar.xz", use = ["tar_xz"]},
+    {name = "*.tar.gz",use=["tar_gz"]}
+    ]
+
+
+

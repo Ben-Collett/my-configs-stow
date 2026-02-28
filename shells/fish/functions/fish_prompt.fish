@@ -1,0 +1,1 @@
+/home/ben/.config/fish/prompts/christmas.fish

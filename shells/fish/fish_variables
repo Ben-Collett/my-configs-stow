@@ -1,0 +1,19 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:4300
+SETUVAR _fish_abbr_cat:lolcat
+SETUVAR _fish_abbr_intellij:idea\x2dcommunity
+SETUVAR _fish_abbr_l:exa
+SETUVAR _fish_abbr_la:exa\x20\x2da
+SETUVAR _fish_abbr_lg:exa\x7cgrep
+SETUVAR _fish_abbr_lga:exa\x20\x2da\x7cgrep
+SETUVAR _fish_abbr_ls:exa
+SETUVAR _fish_abbr_mkp:mkdir\x20\x2dp
+SETUVAR _fish_abbr_sh0:shutdown\x20now
+SETUVAR _fish_abbr_shr:shutdown\x20\x2dr\x20now
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1e/home/ben/\x2econfig/fish/themes/kali\x2efish\x1eqiuxiang/flutter\x2dfish\x2dcompletions\x1ereitzig/sdkman\x2dfor\x2dfish\x40v2\x2e1\x2e0
+SETUVAR _fisher_qiuxiang_2F_flutter_2D_fish_2D_completions_files:\x7e/\x2econfig/fish/completions/flutter\x2efish
+SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_40_v2_2E_31_2E_30__files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_user_paths:/home/ben/\x2esimple_scripts\x1e/home/ben/\x2eopencode/bin\x1e/home/ben/\x2escripts\x1e/home/ben/\x2elocal/bin\x1e/home/ben/app_images\x1e/home/ben/programs/flutter/bin\x1e/home/ben/\x2enix\x2dprofile/bin\x1e/home/ben/\x2ecargo/bin

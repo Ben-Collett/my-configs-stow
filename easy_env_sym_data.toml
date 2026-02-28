@@ -1,0 +1,23 @@
+[general]
+no-new-files = []
+no-update-on = []
+
+[network]
+retry-delays-ms = 6000
+max-attempts = 10
+
+[paths]
+"editors/emacs" = "~/.config/emacs"
+"keyb" = "/etc/keyb"
+"keyd" = "/etc/keyd"
+"mpv" = "~/.config/mpv"
+"shells/fish" = "~/.config/fish"
+"window_managers/i3" = "~/.config/i3"
+"yazi" = "~/.config/yazi"
+".wezterm.lua" = "~/.wezterm.lua"
+"editors/nvim" = "~/.config/nvim"
+"terminal_emulators/.wezterm.lua" = "~/.wezterm.lua"
+"window_managers/hypr" = "~/.config/hypr"
+"my_tools/easy_env" = "~/.config/easy_env"
+"my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
+"my_tools/missed_chord" = "~/.config/missed_chord"
