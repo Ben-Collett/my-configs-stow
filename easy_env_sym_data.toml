@@ -1,8 +1,8 @@
 [general]
 no-new-files = []
-no-update-on = []
-push-notify-command = "notify-send -t 2147483647 hi"
-notify-errors-only = false
+no-update-on = ["editors/nvim/lazy-lock.json"]
+push-notify-command = "notify-send -t 2147483647 $!SYM_MESSAGE"
+# notify-errors-only = false
 
 [network]
 retry-delays-ms = 6000
