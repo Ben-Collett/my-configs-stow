@@ -1,0 +1,17 @@
+  /* #workspaces button { */
+  /*   color: silver; */
+  /* } */
+  /**/
+  /* #workspaces button.active { */
+  /*   color: gold; */
+  /* } */
+  * {
+    font-family: "JetBrains Mono", "IBM Plex Serif";
+    font-size: 13px;
+    color: #ffb347;
+  }
+
+  window#waybar {
+    background: rgba(26, 20, 16, 0.85);
+    border-bottom: 2px solid #00e5ff;
+  }

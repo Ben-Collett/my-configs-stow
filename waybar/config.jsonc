@@ -1,0 +1,53 @@
+{
+  "height": 12,
+  "spacing": 2,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "disk",
+    "cpu",
+    "memory",
+    "battery",
+    "backlight",
+    "clock"
+  ],
+  "disk": {
+    "format": "💾 {free}",
+    "path": "/",
+    "interval": 60
+  },
+  "cpu": {
+    "format": "🧠 {usage}%",
+    "interval": 5
+  },
+  "memory": {
+    "format": "🧮 {used}GB",
+    "interval": 5
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": {
+      "charging": "⚡🔋",
+      "discharging": [
+        "🔋",
+        "🪫"
+      ]
+    },
+    "interval": 10
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "🌑",
+      "🌘",
+      "🌓",
+      "🌕"
+    ],
+    "interval": 5
+  },
+  "clock": {
+    "format": "🕓 {:%H:%M:%S}",
+    "interval": 1
+  }
+}

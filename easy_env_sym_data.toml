@@ -2,7 +2,6 @@
 no-new-files = []
 no-update-on = ["editors/nvim/lazy-lock.json"]
 push-notify-command = "notify-send -t 2147483647 $!SYM_MESSAGE"
-# notify-errors-only = false
 
 [network]
 retry-delays-ms = 6000
@@ -23,3 +22,4 @@ max-attempts = 10
 "my_tools/easy_env" = "~/.config/easy_env"
 "my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
 "my_tools/missed_chord" = "~/.config/missed_chord"
+"waybar" = "~/.config/waybar"
