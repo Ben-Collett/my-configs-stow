@@ -1,17 +1,34 @@
 {
   "height": 12,
-  "spacing": 2,
+  "spacing": 0,
   "modules-left": [
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "pulseaudio",
     "disk",
-    "cpu",
-    "memory",
+    // "cpu",
+    // "memory",
     "battery",
-    "backlight",
+    // "backlight",
     "clock"
   ],
+  "pulseaudio": {
+    "format": "{desc}, {volume}%",
+    "format-bluetooth": "{desc}, {volume}%",
+    "format-bluetooth-muted": "🔇 {desc}",
+    "format-muted": "🔇",
+    "format-icons": {
+      "headphone": "🎧",
+      "hands-free": "🎤",
+      "headset": "🎤🎧",
+      "phone": "📞",
+      "portable": "📱",
+      "car": "🚗"
+    },
+    "on-click": "pavucontrol",
+    "tooltip-format": "{desc}, {volume}%"
+  },
   "disk": {
     "format": "💾 {free}",
     "path": "/",
