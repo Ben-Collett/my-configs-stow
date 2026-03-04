@@ -5,18 +5,7 @@
 
 window#waybar {
   background: rgba(5, 12, 20, 0.96);
-  border-bottom: 3px solid #00e5ff;
-
-  box-shadow:
-    0 0 18px #00e5ff,
-    inset 0 0 20px rgba(0, 229, 255, 0.2);
-
-  /* Grid overlay */
-  background-image:
-    linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
-
-  background-size: 22px 22px;
+  border-bottom: 2px solid #00e5ff;
 }
 
 #workspaces,
@@ -32,14 +21,10 @@ window#waybar {
   padding: 6px 12px;
   margin: 4px 6px;
 
-  border: 2px solid #00e5ff;
-  border-radius: 6px;
+  border: 1px solid #00e5ff;
+  border-radius: 4px;
 
   background: rgba(0, 20, 30, 0.8);
-
-  box-shadow:
-    0 0 10px rgba(0, 229, 255, 0.5),
-    inset 0 0 8px rgba(0, 229, 255, 0.15);
 
   color: #00e5ff;
 }
@@ -47,9 +32,9 @@ window#waybar {
 #workspaces button {
   padding: 4px 8px;
   margin: 2px;
-  border-radius: 4px;
+  border-radius: 3px;
 
-  border: 2px solid #00e5ff;
+  border: 1px solid #00e5ff;
   background: rgba(0, 40, 60, 0.8);
   color: #00e5ff;
 }
@@ -57,8 +42,6 @@ window#waybar {
 #workspaces button.active {
   background: #00e5ff;
   color: #001018;
-
-  box-shadow: 0 0 12px #00e5ff;
 }
 
 #workspaces button:hover {
@@ -67,62 +50,21 @@ window#waybar {
 
 #battery.charging {
   color: #00ff9f;
-  box-shadow: 0 0 12px #00ff9f;
+  border-color: #00ff9f;
 }
 
 #battery.warning {
   color: #ffae00;
   border-color: #ffae00;
-  box-shadow: 0 0 12px #ffae00;
 }
 
 #battery.critical {
   color: #ff2e2e;
   border-color: #ff2e2e;
-
-  animation: reactorPulse 0.8s infinite alternate;
 }
-
-@keyframes reactorPulse {
-  0% {
-    box-shadow: 0 0 8px #ff2e2e;
-  }
-
-  100% {
-    box-shadow: 0 0 18px #ff0000;
-  }
-}
-
-/* #tray, */
-/* #memory, */
-/* #disk { */
-/*   border-color: #c26a2e; */
-/*   color: #ffb074; */
-/**/
-/*   background: rgba(40, 24, 10, 0.85); */
-/**/
-/*   box-shadow: */
-/*     0 0 8px rgba(194, 106, 46, 0.6), */
-/*     inset 0 0 6px rgba(120, 60, 20, 0.5); */
-/* } */
 
 #clock:hover,
 #cpu:hover,
 #disk:hover {
-  background: rgba(0, 229, 255, 0.2);
-  box-shadow: 0 0 18px #00e5ff;
-}
-
-@keyframes scan {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 0 22px;
-  }
-}
-
-window#waybar {
-  animation: scan 2.5s linear infinite;
+  background: rgba(0, 229, 255, 0.15);
 }
