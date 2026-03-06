@@ -1,0 +1,10 @@
+custom-shader = ~/.config/ghostty/shaders/sparks_cursor_blaze.glsl
+theme = Wez
+
+palette = 2=#00FF00
+palette = 10=#00FF00
+palette = 14=#00FFFF
+background = #000000
+foreground = #839496
+cursor-color = #A400D3
+background-opacity = .9

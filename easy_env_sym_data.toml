@@ -23,3 +23,4 @@ max-attempts = 10
 "my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
 "my_tools/missed_chord" = "~/.config/missed_chord"
 "waybar" = "~/.config/waybar"
+"ghostty" = "~/.config/ghostty"
