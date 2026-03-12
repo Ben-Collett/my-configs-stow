@@ -1,5 +1,6 @@
 [general]
 auto_append = false
+spacing_type = "code"
 
 [ipc]
 ipc_enabled_commands = [
