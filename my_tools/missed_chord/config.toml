@@ -16,9 +16,12 @@ duration_seconds = 6
 # filters out triggers and chords
 [filter]
 excluded_chords = ["I"]
-white_listed = ["the", "and", "that", "have"]
+white_listed = []
 
-# qt notification specific settings
+[logging]
+log_to_stdout = true
+log_to_path = "~/Documents/logs/missed.log"
+
 [qt]
 duration_height = 8  # height of duration bar set to 0 to hide, default = 8
 max_notifications = 4  # if <= 0 then unlimited, defaults to three

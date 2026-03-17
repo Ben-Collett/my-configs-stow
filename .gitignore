@@ -1,5 +1,12 @@
 mpv/watch_later/
-editors/emacs/straight/
-editors/emacs/eln-cache/
 yazi/plugins/
 shells/*/easy_env.*
+
+editors/emacs/straight/
+editors/emacs/eln-cache/
+
+
+content_creation_programs/obs-studio/logs/
+content_creation_programs/obs-studio/profiler_data/
+content_creation_programs/obs-studio/.sentinel/
+content_creation_programs/obs-studio/plugin_manager/

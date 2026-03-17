@@ -24,3 +24,4 @@ max-attempts = 10
 "my_tools/missed_chord" = "~/.config/missed_chord"
 "waybar" = "~/.config/waybar"
 "ghostty" = "~/.config/ghostty"
+"content_creation_programs/obs-studio" = "~/.config/obs-studio"
