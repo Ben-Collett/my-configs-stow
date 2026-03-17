@@ -15,7 +15,8 @@ duration_seconds = 6
 
 # filters out triggers and chords
 [filter]
-excluded_chords = ["have", "I"]
+excluded_chords = ["I"]
+white_listed = ["the", "and", "that", "have"]
 
 # qt notification specific settings
 [qt]
