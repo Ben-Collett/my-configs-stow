@@ -2,26 +2,34 @@
 no-new-files = []
 no-update-on = ["editors/nvim/lazy-lock.json"]
 push-notify-command = "notify-send -t 2147483647 $!SYM_MESSAGE"
+group-order-override = ["my_tools", "editors", "shells", "terminal_emulators"]
 
 [network]
 retry-delays-ms = 6000
 max-attempts = 10
 
 [paths]
-"editors/emacs" = "~/.config/emacs"
+# misc.
+".wezterm.lua" = "~/.wezterm.lua"
+"ghostty" = "~/.config/ghostty"
 "keyb" = "/etc/keyb"
 "keyd" = "/etc/keyd"
 "mpv" = "~/.config/mpv"
-"shells/fish" = "~/.config/fish"
-"window_managers/i3" = "~/.config/i3"
+"waybar" = "~/.config/waybar"
 "yazi" = "~/.config/yazi"
-".wezterm.lua" = "~/.wezterm.lua"
-"editors/nvim" = "~/.config/nvim"
-"terminal_emulators/.wezterm.lua" = "~/.wezterm.lua"
-"window_managers/hypr" = "~/.config/hypr"
+# my_tools
 "my_tools/easy_env" = "~/.config/easy_env"
 "my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
 "my_tools/missed_chord" = "~/.config/missed_chord"
-"waybar" = "~/.config/waybar"
-"ghostty" = "~/.config/ghostty"
+# editors
+"editors/emacs" = "~/.config/emacs"
+"editors/nvim" = "~/.config/nvim"
+# shells
+"shells/fish" = "~/.config/fish"
+# terminal_emulators
+"terminal_emulators/.wezterm.lua" = "~/.wezterm.lua"
+# content_creation_programs
 "content_creation_programs/obs-studio" = "~/.config/obs-studio"
+# window_managers
+"window_managers/hypr" = "~/.config/hypr"
+"window_managers/i3" = "~/.config/i3"
