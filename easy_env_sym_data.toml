@@ -9,27 +9,35 @@ retry-delays-ms = 6000
 max-attempts = 10
 
 [paths]
-# misc.
-".wezterm.lua" = "~/.wezterm.lua"
-"ghostty" = "~/.config/ghostty"
-"keyb" = "/etc/keyb"
-"keyd" = "/etc/keyd"
-"mpv" = "~/.config/mpv"
-"waybar" = "~/.config/waybar"
-"yazi" = "~/.config/yazi"
 # my_tools
 "my_tools/easy_env" = "~/.config/easy_env"
 "my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
 "my_tools/missed_chord" = "~/.config/missed_chord"
+
 # editors
 "editors/emacs" = "~/.config/emacs"
 "editors/nvim" = "~/.config/nvim"
+
 # shells
 "shells/fish" = "~/.config/fish"
+
 # terminal_emulators
+"terminal_emulators//ghostty" = "~/.config/ghostty"
 "terminal_emulators/.wezterm.lua" = "~/.wezterm.lua"
+
 # content_creation_programs
 "content_creation_programs/obs-studio" = "~/.config/obs-studio"
+
+# tuis
+"tuis/yazi" = "~/.config/yazi"
+
 # window_managers
 "window_managers/hypr" = "~/.config/hypr"
 "window_managers/i3" = "~/.config/i3"
+
+# misc.
+".wezterm.lua" = "~/.wezterm.lua"
+"keyb" = "/etc/keyb"
+"keyd" = "/etc/keyd"
+"mpv" = "~/.config/mpv"
+"waybar" = "~/.config/waybar"
