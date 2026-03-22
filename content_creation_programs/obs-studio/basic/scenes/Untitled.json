@@ -187,7 +187,7 @@
                     {
                         "name": "Video Capture Device (PipeWire) (BETA)",
                         "source_uuid": "9ba85db7-dedc-480c-b26a-333a9341d604",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -302,9 +302,9 @@
         }
     ],
     "saved_projectors": [],
-    "preview_locked": false,
+    "preview_locked": true,
     "scaling_enabled": false,
-    "scaling_level": -16,
+    "scaling_level": -38,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
