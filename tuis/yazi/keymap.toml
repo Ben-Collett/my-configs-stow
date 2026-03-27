@@ -44,18 +44,10 @@ run = "cd ~/Downloads/"
 dec = "cd to downloads"
 
 [[mgr.prepend_keymap]]
-on = ["g", "t"]
-run = "plugin mounter"
-
-[[mgr.prepend_keymap]]
 on = ["n"]
 run = '''
     shell 'fzf&clear' --confirm
 '''
-
-[[mgr.prepend_keymap]]
-on = ["g", "s"]
-run = "plugin es_mounter"
 
 [[mgr.prepend_keymap]]
 on = ["g", "v"]
