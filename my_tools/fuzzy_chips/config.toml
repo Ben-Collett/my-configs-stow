@@ -16,6 +16,10 @@ ipc_enabled_commands = [
   # "rs",  # restart program
 ]
 
+[code]
+spacing_type = "new"
+space_on_new = false
+
 [chips]
 "rl" = ["reload_config"]
 "-" = ["kebab-case-mode"]
