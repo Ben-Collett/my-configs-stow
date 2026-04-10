@@ -1,7 +1,7 @@
 {
     "name": "Untitled",
     "DesktopAudioDevice1": {
-        "prev_ver": 536936448,
+        "prev_ver": 536936449,
         "name": "Desktop Audio",
         "uuid": "e2dda042-1894-4288-80e7-be3a9a09581d",
         "id": "pulse_output_capture",
@@ -32,7 +32,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 536936448,
+        "prev_ver": 536936449,
         "name": "Mic/Aux",
         "uuid": "4baa89b6-3f7e-4f90-a9e6-a068bdc19812",
         "id": "pulse_input_capture",
@@ -64,7 +64,7 @@
     },
     "sources": [
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936449,
             "name": "Video Capture Device (PipeWire) (BETA)",
             "uuid": "9ba85db7-dedc-480c-b26a-333a9341d604",
             "id": "pipewire-camera-source",
@@ -94,7 +94,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936449,
             "name": "Screen Capture (PipeWire) 2",
             "uuid": "b8ac08fe-5b3a-495c-9fbc-06a14b572930",
             "id": "pipewire-screen-capture-source",
@@ -120,7 +120,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936448,
+            "prev_ver": 536936449,
             "name": "Scene",
             "uuid": "e8319e58-17f3-4e87-b7f2-6509be62901b",
             "id": "scene",

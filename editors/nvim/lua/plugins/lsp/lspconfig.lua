@@ -146,6 +146,18 @@ return {
         },
       },
     })
+
+    vim.lsp.config("pyright", {
+      settings = {
+        python = {
+          analysis = {
+            diagnosticSeverityOverrides = {
+              reportUnusedVariable = "none",
+            },
+          },
+        },
+      },
+    })
     --
     -- Change the Diagnostic symbols in the sign column (gutter)
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
