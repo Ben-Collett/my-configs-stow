@@ -63,12 +63,14 @@ float lightningBolt(vec2 p, vec2 start, vec2 end, float time) {
     vec2 prev = start;
     float minD = 1e9;
 
+    float clampedLen = min(len, 0.15);
+
     for (int i = 1; i <= N; i++) {
         float t = float(i) / float(N);
         float taper = pow(sin(3.14159265 * t), 1.3);
 
         float j = boltNoise(t, time);
-        float amp = len * 0.12 * taper;
+        float amp = clampedLen * 0.12 * taper;
 
         vec2 cur = mix(start, end, t) + perp * j * amp;
 
@@ -76,10 +78,10 @@ float lightningBolt(vec2 p, vec2 start, vec2 end, float time) {
         prev = cur;
     }
 
-    float core = 1.0 - smoothstep(len * 0.002, len * 0.006, minD);
-    float glow = 1.0 - smoothstep(len * 0.012, len * 0.045, minD);
+    float core = 1.0 - smoothstep(clampedLen * 0.002, clampedLen * 0.006, minD);
+    float glow = 1.0 - smoothstep(clampedLen * 0.012, clampedLen * 0.045, minD);
 
-    float along = clamp(dot(p - start, dir) / len, 0.0, 1.0);
+    float along = clamp(dot(p - start, dir) / max(len, 1e-4), 0.0, 1.0);
     float endFade = smoothstep(0.0, 0.06, along) * smoothstep(1.0, 0.92, along);
 
     float flicker = 0.8 + 0.2 * sin(time * 40.0);
@@ -124,35 +126,58 @@ float lightningBranches(vec2 p, vec2 start, vec2 end, float time) {
     return clamp(outVal, 0.0, 1.0);
 }
 
-// ===== Sparks (preserved, slightly tuned) =====
+// ===== Sparks =====
 
-float sparks(vec2 p, vec2 origin, float time, float maxAge) {
-    float sparkIntensity = 0.0;
+float sparks(vec2 p, vec2 origin, float time, float sparkTime) {
+    float sparksVal = 0.0;
 
-    for (int i = 0; i < 14; i++) {
+    const int SPARK_COUNT = 18;
+
+    for (int i = 0; i < SPARK_COUNT; i++) {
         float fi = float(i);
-        float seed = fi * 127.1;
 
-        float age = fract(time * 2.0 + seed * 0.01) * maxAge;
-        if (age > maxAge) continue;
+        float seed = hash11(fi + time * 17.0);
 
-        float angle = hash11(seed) * 6.28318 + time;
-        float speed = 0.3 + hash11(seed + 1.0) * 0.4;
+        float angle = seed * 6.28318;
+        vec2 dir = vec2(cos(angle), sin(angle));
 
-        vec2 vel = vec2(cos(angle), sin(angle)) * speed;
-        vel.y -= 0.6 * age;
+        float upwardBias = mix(0.6, 1.6, step(0.0, dir.y));
 
-        vec2 sparkPos = origin + vel * age;
+        float speed = (0.10 + hash11(fi * 3.1) * 0.18) * upwardBias;
 
-        float size = 0.004 * (1.0 - age / maxAge);
-        float d = length(p - sparkPos);
+        float gravity = -0.35;
 
-        float brightness = (1.0 - age / maxAge);
-        sparkIntensity += smoothstep(size, size * 0.2, d) * brightness;
+        vec2 pos = origin + dir * sparkTime * speed;
+        pos.y += gravity * sparkTime * sparkTime;
+
+        float d = length(p - pos);
+
+        float sparkHead = smoothstep(0.006, 0.0, d);
+
+        vec2 prev = origin + dir * (sparkTime - 0.04) * speed;
+        prev.y += gravity * (sparkTime - 0.04) * (sparkTime - 0.04);
+
+        vec2 pa = p - prev;
+        vec2 ba = pos - prev;
+
+        float h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
+        float lineDist = length(pa - ba * h);
+
+        float sparkTrail = smoothstep(0.0035, 0.0, lineDist) * 0.9;
+
+        sparksVal += sparkHead + sparkTrail;
     }
 
-    return sparkIntensity;
+    sparksVal *= (1.0 - sparkTime);
+
+    return sparksVal;
 }
+
+// ===== Constants =====
+
+const float DURATION = 0.5;
+const float SPARK_DURATION = 0.28;
+const float DRAW_THRESHOLD = 1.5;
 
 // ===== Main =====
 
@@ -164,14 +189,26 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
     vec2 uv = normalizeCoords(fragCoord, 1.0);
 
-    vec2 start = normalizeCoords(iPreviousCursor.xy, 1.0);
-    vec2 end   = normalizeCoords(iCurrentCursor.xy, 1.0);
+    vec4 currentCursor = vec4(normalizeCoords(iCurrentCursor.xy, 1.0), normalizeCoords(iCurrentCursor.zw, 0.0));
+    vec4 previousCursor = vec4(normalizeCoords(iPreviousCursor.xy, 1.0), normalizeCoords(iPreviousCursor.zw, 0.0));
 
-    float dist = distance(start, end);
+    vec2 currentCenter = vec2(currentCursor.x + currentCursor.z * 0.5, currentCursor.y - currentCursor.w * 0.5);
+    vec2 previousCenter = vec2(previousCursor.x + previousCursor.z * 0.5, previousCursor.y - previousCursor.w * 0.5);
+
+    float cursorWidth = currentCursor.z;
+    float cursorHeight = currentCursor.w;
+
+    float lineLength = distance(currentCenter, previousCenter);
+    float drawThreshold = DRAW_THRESHOLD * max(cursorWidth, cursorHeight);
 
     vec3 col = fragColor.rgb;
 
-    if (dist > 0.002) {
+    float progress = clamp((iTime - iTimeCursorChange) / DURATION, 0.0, 1.0);
+    float sparkProgress = (iTime - iTimeCursorChange) / SPARK_DURATION;
+
+    if (lineLength > drawThreshold && progress < 1.0) {
+        vec2 start = previousCenter;
+        vec2 end = currentCenter;
 
         float bolt = lightningBolt(uv, start, end, iTime);
         float forks = lightningBranches(uv, start, end, iTime);
@@ -179,12 +216,16 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
         vec3 coreColor = vec3(1.0);
         vec3 glowColor = vec3(0.45, 0.65, 1.0);
 
-        col += glowColor * bolt * 0.9;
-        col += coreColor * (bolt * 1.2 + forks * 0.8);
+        float fadeOut = 1.0 - progress;
+        fadeOut = fadeOut * fadeOut;
 
-        // sparks at endpoint
-        float sparkVal = sparks(uv, end, iTime, 0.8);
-        col += vec3(1.0, 0.5, 0.1) * sparkVal * 1.5;
+        col += glowColor * bolt * 0.9 * fadeOut;
+        col += coreColor * (bolt * 1.2 + forks * 0.8) * fadeOut;
+
+        if (sparkProgress < 1.0 && sparkProgress > 0.0) {
+            float sparkVal = sparks(uv, end, iTimeCursorChange, sparkProgress);
+            col += vec3(1.6, 0.7, 0.2) * sparkVal * 1.5;
+        }
     }
 
     fragColor = vec4(col, 1.0);

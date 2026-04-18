@@ -1,6 +1,5 @@
 [general]
 auto_append = false
-spacing_type = "code"
 
 [ipc]
 ipc_enabled_commands = [
@@ -15,6 +14,10 @@ ipc_enabled_commands = [
   # "rl",  # reload config
   # "rs",  # restart program
 ]
+
+[chunking]
+spacing_type = "all"
+new_chunks_only = true
 
 [code]
 spacing_type = "new"
@@ -199,7 +202,6 @@ space_on_new = false
 "lt" = "those"
 "il" = "I'll"
 "ill" = "ill"
-"trs" = "there's"
 "yrs" = "years"
 "yr" = "year"
 "wti" = "white"
