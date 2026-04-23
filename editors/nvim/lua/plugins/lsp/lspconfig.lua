@@ -18,11 +18,6 @@ return {
       },
     })
     vim.lsp.enable("dartls")
-    -- lspconfig.dartls.setup({
-    --   capabilities = default_cap,
-    --   flags = { allow_incremental_sync = false },
-    --   cmd = { "dart", "language-server", "--protocol=lsp" },
-    -- })
 
     vim.lsp.config("rust_analyzer", {
       cmd = { "rust-analyzer" },
