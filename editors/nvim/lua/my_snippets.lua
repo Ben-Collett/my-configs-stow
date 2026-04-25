@@ -60,24 +60,15 @@ local function java(ls, s, t, i, fmt, rep)
   define_auto_snippet("java", "PRINT_PLZ ", content, args, ls, s, fmt)
 end
 local function python(ls, s, t, i, fmt, rep)
-  local args = {i(1,"className"),i(2,"pass")}
-  local content = "def {}:\n  {}\n"
-  define_auto_snippet("python", "DECLARE_CLASS_PLZ ", content, args, ls, s, fmt)
-  args = {i(1,"name"),i(2,"value"),i(3)}
-  content = "final {} = {};{}"
+  local args = {i(1,"name"),i(2,"value"),i(3)}
+  local content = "final {} = {};{}"
   define_auto_snippet("python", "immutable", content, args, ls, s, fmt)
   args = {i(1,"conditional"),i(2,"pass")}
   content = "if({}):\n  {}"
   define_auto_snippet("python", "iff", content, args, ls, s, fmt)
-  args = {i(1,"params"),i(2,"pass")}
-  content = "def name({}):\n  {}"
-  define_auto_snippet("python", "function", content, args, ls, s, fmt)
   args = {i(1,"name"),i(2,"value")}
   content = "{} = {}"
   define_auto_snippet("python", "DECLARE_CONST_PLZ ", content, args, ls, s, fmt)
-  args = {i(1,"pass")}
-  content = "def __init__(self):\n  {}"
-  define_auto_snippet("python", "init", content, args, ls, s, fmt)
   args = {i(1,"")}
   content = "print({})"
   define_auto_snippet("python", "prr", content, args, ls, s, fmt)
