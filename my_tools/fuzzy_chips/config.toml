@@ -289,3 +289,5 @@ space_on_new = false
 "rn" = "return"
 "rnn" = "\r\n"
 "rnnn" = "\r\n\r\n"
+"pg" = "page"
+"gk" = "group"
