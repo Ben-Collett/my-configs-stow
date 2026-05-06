@@ -16,7 +16,6 @@ ipc_enabled_commands = [
 ]
 
 [chunking]
-spacing_type = "all"
 new_chunks_only = true
 
 [code]
