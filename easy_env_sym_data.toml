@@ -12,6 +12,7 @@ max-attempts = 10
 # my_tools
 "my_tools/easy_env" = "~/.config/easy_env"
 "my_tools/fuzzy_chips" = "~/.config/fuzzy_chips"
+"my_tools/ksv" = "~/.config/ksv"
 "my_tools/missed_chord" = "~/.config/missed_chord"
 
 # editors

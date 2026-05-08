@@ -1,0 +1,12 @@
+[logging]
+help_info = [
+  "user",
+  "command",
+  # "config",
+  "restart",
+  "stop",
+  "clear",
+  "help",
+  "reload",
+  # "terminate",
+]
