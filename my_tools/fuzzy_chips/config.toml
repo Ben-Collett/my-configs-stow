@@ -36,6 +36,7 @@ space_on_new = false
 "'t" = ["backspace", "n", "'", "t", "space"]
 "'l" = ["backspace", "'", "l", "l", "space"]
 "'d" = ["backspace", "'", "d", "space"]
+"aT" = "long"
 "at" = "at"
 "it" = "it"
 "in" = "in"
